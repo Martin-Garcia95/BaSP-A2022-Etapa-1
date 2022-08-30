@@ -10,3 +10,5 @@
         Today I advanced with more "body" sections of the landing page
     #28-08-22
     Today I worked on Company section plus another ones
+    #30-08-22
+    Today I complete the last section along with the footer
