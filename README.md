@@ -12,3 +12,8 @@
     Today I worked on Company section plus another ones
     #30-08-22
     Today I complete the last section along with the footer
+###Week 03
+    #02-09-22
+        Today I fix the syntax error on the html file and created the folder for css
+    #03-09-22
+    

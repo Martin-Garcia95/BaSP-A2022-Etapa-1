@@ -1,0 +1,20 @@
+body{
+    background-color: #DEEFF1;
+    color: #373867;
+    font-family: Comic Sans MS;
+}
+header{
+    background-color: #373867;
+    color: #46a07b;
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+}
+nav{
+    background-color: #373867;
+    color: #46a07b;
+    font-size: 16.27px;
+}
+aside{
+    background-color: #EBECF0;
+    color: #46a07b;
