@@ -6,23 +6,80 @@ body{
 header{
     background-color: #373867;
     color: #46a07b;
-    font-family: sans-serif;
+    font-family: Comic Sans MS;
     font-size: 30px;
     font-weight: bold;
+    height: 91px;
+    width: 1512px;
+}
+#image-header{
+    height: 67px;
+    width: 65px;
+}
+h1{
+    position: relative;
+    left: 300px;
+    bottom: 120px;
 }
 nav{
     background-color: #373867;
     color: #46a07b;
-    font-size: 16.27px;
+    font-size: 17px;
+    position: relative;
+    left: 250px;
+    bottom: 150px;
 }
 aside{
     background-color: #EBECF0;
     color: #46a07b;
+    position: fixed;
+    height: 952px;
+    width: 253px;
 }
-.box-1{
-    background-color: #46a07b;
-    color: #373867;
+#image-aside{
+    position: relative;
 }
-.Company{
-    background-color:  #e5f2f3;
+#home{
+    font-size: 50px;
+    position:relative;
+    left: 600px;
+}
+.landing-first{
+    position: relative;
+    left: 500px;
+}
+#aplication-feactures{
+    position: relative;
+    left: 400px;
+}
+.hour-reports{
+    position: relative;
+    left: 400px;
+}
+.resource-roles{
+    position: relative;
+    left: 900px;
+    bottom: 550px;
+}
+#wsyut{
+    position: relative;
+    left: 500px;
+}
+.productivity-management{
+    position: relative;
+    left: 350px;
+    width: 260px;
+}
+.work-making{
+    position: relative;
+    left: 750px;
+    bottom: 550px;
+}
+#inscription-form{
+    position: relative;
+    left: 270px;
+}
+.formulary{
+    position: relative;
+    left: 260px;
 }
