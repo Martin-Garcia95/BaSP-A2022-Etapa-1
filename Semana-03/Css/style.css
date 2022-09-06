@@ -1,18 +1,19 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 body{
     background-color: #fff;
     color: #373867;
-    font-family: Comic Sans MS;
+    font-family: Roboto;
 }
 header{
     background-color: #373867;
     color: #46a07b;
-    font-family: Comic Sans MS;
     font-size: 30px;
     font-weight: bold;
     height: 91px;
     width: 1512px;
 }
-#image-header{
+
+.body-header-image{
     height: 67px;
     width: 65px;
 }
@@ -36,50 +37,246 @@ aside{
     height: 952px;
     width: 253px;
 }
-#image-aside{
+aside > menu{
+    position: relative;
+    top: 100px;
+    width: 146px;
+    height: 250px;
+    font-size: 17px;
+}
+aside > img{
+    position: relative;
+    width: 66px;
+    height: 75px;
+    left: 50px;
+    top: 500px;
+}
+aside > p{
     position: relative;
 }
-#home{
-    font-size: 50px;
-    position:relative;
+main > section > h2{
+    position: relative;
     left: 600px;
+    top: 200px;
+    font-size: 50px;
+    font-family: Roboto;
+    border-style: solid;
+    padding: 10px;
+    margin: 20px;
+    width: 307px;
 }
-.landing-first{
+main > section > h3{
     position: relative;
-    left: 500px;
+    font-size: 28.47px;
+    width: 546px;
+    height: 457,4px;
+    left: 350px;
+    top: 200px;
 }
-#aplication-feactures{
-    position: relative;
-    left: 400px;
-}
-.hour-reports{
-    position: relative;
-    left: 400px;
-}
-.resource-roles{
+main > section > img{
     position: relative;
     left: 900px;
-    bottom: 550px;
+    width: 500px;
 }
-#wsyut{
+.aplication-feactures > h2{
     position: relative;
-    left: 500px;
+    left: 400px;
+    width: 386px;
+    height: 47px;
 }
-.productivity-management{
+.hour-resource{
     position: relative;
-    left: 350px;
-    width: 260px;
+    left: 400px;
+    font-size: 30px;
 }
-.work-making{
+.hour-resource > img{
+    border-style: solid;
+}
+.reports-roles{
     position: relative;
-    left: 750px;
-    bottom: 550px;
+    left: 900px;
+    bottom: 690px;
+    font-size: 30px;
 }
-#inscription-form{
+.reports-roles > img{
+    border-style: solid;
+}
+.wsyut > h2{
+    position: relative;
+    left: 400px;
+    bottom: 500px;
+    font-size: 40px;
+}
+.wsyut > div > h3{
+    font-size: 30px;
+}
+.productivity-booster > h3{
+    position: relative;
+    bottom: 500px;
+    left: 390px;
+}
+.productivity-booster > p{
+    position: relative;
+    bottom: 600px;
+    left: 390px;
+    width: 270px;
+    height: 92px;
+    font-size: 20px;
+}
+.productivity-booster > img{
+    position: relative;
+    left: 250px;
+    bottom: 500px;
+}
+.leadership > h3{
+    position: relative;
+    bottom: 500px;
+    left: 390px;
+}
+.leadership > p{
+    position: relative;
+    bottom: 600px;
+    left: 390px;
+    width: 350px;
+    height: 168px;
+    font-size: 20px;
+}
+.leadership > img{
+    position: relative;
+    left: 250px;
+    bottom: 500px;
+}
+.work-traceability > h3{
+    position: relative;
+    bottom: 1200px;
+    left: 900px;
+}
+.work-traceability > p{
+    position: relative;
+    bottom: 1200px;
+    left: 900px;
+    width: 275px;
+    height: 48px;
+    font-size: 20px;
+}
+.work-traceability > img{
+    position: relative;
+    bottom: 1200px;
+    left: 900px;
+}
+.inscription-form > h2{
     position: relative;
     left: 270px;
 }
-.formulary{
+.inscription-form > form{
     position: relative;
     left: 260px;
+}
+.companys-mission > h2{
+    position: relative;
+    left: 250px;
+}
+.body-section-company{
+    position: relative;
+    left: 750px;
+    bottom: 100px;
+    width: 112px;
+    height: 128,45px;
+}
+.company-where > h3{
+    background-color: aqua;
+    position: relative;
+    width: 757px;
+    height: 45px;
+    left: 250px;
+}
+.company-where > h4{
+    position: relative;
+    left: 250px;
+}
+.company-where > p{
+    position: relative;
+    left: 250px;
+}
+.company-hear > h3{
+    position: relative;
+    left: 250px;
+}
+.company-hear > blockquote{
+    position: relative;
+    left: 250px;
+}
+article > h2{
+    position: relative;
+    left: 250px;
+}
+article > p{
+    position: relative;
+    left: 250px;
+}
+article > image{
+    position: relative;
+    left: 700px;
+}
+.image-products{
+    width: 384px;
+    height: 284px;
+}
+.our-products > h2{
+    position: relative;
+    left: 700px;
+}
+.employee-app{
+    position: relative;
+    left: 300px;
+}
+.customized-well{
+    position: relative;
+    left: 750px;
+    bottom: 900px;
+}
+.section-company > h2{
+    position: relative;
+    left: 250px;
+}
+.company-building{
+    position: relative;
+    left: 250px;
+}
+.company-building > h3{
+    position: relative;
+    left: 250px;
+}
+.company-building > p{
+    position: relative;
+    left: 250px;
+}
+.company-inclusive{
+    position: relative;
+    left: 250px;
+}
+.company-inclusive > h3{
+    position: relative;
+    left: 250px;
+}
+.company-inclusive > p{
+    position: relative;
+    left: 250px;
+}
+.company-workplace{
+    position: relative;
+    left: 250px;
+}
+.company-workplace > h3{
+    position: relative;
+    left: 250px;
+}
+.company-workplace > p{
+    position: relative;
+    left: 250px;
+}
+.section-support{
+    position: relative;
+    text-align: center;
+    image-orientation: flip;
 }
