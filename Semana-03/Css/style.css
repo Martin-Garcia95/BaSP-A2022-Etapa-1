@@ -1,16 +1,19 @@
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-body{
+body{    
+    overflow-x: hidden;
+    height: 100%;
     background-color: #fff;
     color: #373867;
     font-family: Roboto;
 }
 header{
+    position:static;
     background-color: #373867;
     color: #46a07b;
     font-size: 30px;
     font-weight: bold;
     height: 91px;
-    width: 1512px;
+    width: 100%;
+    z-index: 1;
 }
 
 .body-header-image{
@@ -19,16 +22,38 @@ header{
 }
 h1{
     position: relative;
-    left: 300px;
+    left: 650px;
     bottom: 120px;
 }
 nav{
-    background-color: #373867;
+    z-index: 1;
     color: #46a07b;
     font-size: 17px;
     position: relative;
-    left: 250px;
-    bottom: 150px;
+    left: 350px;
+    bottom: 137px;
+    width: 100%;
+}
+.navigation ul{
+    position: fixed;
+}
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navigation li {
+  float: left;
+}
+.navigation li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+  width: 160px;
+  height: 55px;
+  font-size: 20px;
+  text-align: inherit;
 }
 aside{
     background-color: #EBECF0;
@@ -61,32 +86,39 @@ main > section > h2{
     font-size: 50px;
     font-family: Roboto;
     border-style: solid;
-    padding: 10px;
+    border-color: #0a0a0a;
+    padding: 20px;
     margin: 20px;
     width: 307px;
+    background-color: #46a07b;
 }
 main > section > h3{
     position: relative;
-    font-size: 28.47px;
+    font-size: 28.85px;
     width: 546px;
     height: 457,4px;
     left: 350px;
-    top: 200px;
+    top: 300px;
 }
 main > section > img{
     position: relative;
-    left: 900px;
+    left: 950px;
+    top: 70px;
     width: 500px;
+    height: 272.52px;
 }
 .aplication-feactures > h2{
     position: relative;
     left: 400px;
+    top: 470px;
     width: 386px;
     height: 47px;
+    font-size: 40px;
 }
 .hour-resource{
     position: relative;
     left: 400px;
+    top: 500px;
     font-size: 30px;
 }
 .hour-resource > img{
@@ -95,7 +127,7 @@ main > section > img{
 .reports-roles{
     position: relative;
     left: 900px;
-    bottom: 690px;
+    bottom: 220px;
     font-size: 30px;
 }
 .reports-roles > img{
@@ -104,7 +136,7 @@ main > section > img{
 .wsyut > h2{
     position: relative;
     left: 400px;
-    bottom: 500px;
+    top: 100px;
     font-size: 40px;
 }
 .wsyut > div > h3{
@@ -112,12 +144,12 @@ main > section > img{
 }
 .productivity-booster > h3{
     position: relative;
-    bottom: 500px;
+    top: 200px;
     left: 390px;
 }
 .productivity-booster > p{
     position: relative;
-    bottom: 600px;
+    top: 50px;
     left: 390px;
     width: 270px;
     height: 92px;
@@ -126,16 +158,18 @@ main > section > img{
 .productivity-booster > img{
     position: relative;
     left: 250px;
-    bottom: 500px;
+    top: 100px;
 }
 .leadership > h3{
     position: relative;
-    bottom: 500px;
+    top: 200px;
     left: 390px;
+    width: 260px;
+    height: 65px;
 }
 .leadership > p{
     position: relative;
-    bottom: 600px;
+    top: 80px;
     left: 390px;
     width: 350px;
     height: 168px;
@@ -144,16 +178,16 @@ main > section > img{
 .leadership > img{
     position: relative;
     left: 250px;
-    bottom: 500px;
+    top: 100px;
 }
 .work-traceability > h3{
     position: relative;
-    bottom: 1200px;
+    bottom: 550px;
     left: 900px;
 }
 .work-traceability > p{
     position: relative;
-    bottom: 1200px;
+    bottom: 680px;
     left: 900px;
     width: 275px;
     height: 48px;
@@ -161,62 +195,107 @@ main > section > img{
 }
 .work-traceability > img{
     position: relative;
-    bottom: 1200px;
+    bottom: 650px;
+    left: 800px;
+}
+.decision-making > h3{
+    position: relative;
+    bottom: 500px;
     left: 900px;
+}
+.decision-making > p{
+    position: relative;
+    bottom: 650px;
+    left: 900px;
+    width: 275px;
+    height: 48px;
+    font-size: 20px;
+}
+.decision-making > img{
+    position: relative;
+    bottom: 600px;
+    left: 800px;
 }
 .inscription-form > h2{
     position: relative;
-    left: 270px;
+    left: 370px;
+    bottom: 200px;
 }
 .inscription-form > form{
     position: relative;
-    left: 260px;
+    left: 360px;
+    bottom: 150px;
+    width: 554px;
+    height: 37px;
 }
 .companys-mission > h2{
     position: relative;
     left: 250px;
+    top: 200px;
 }
-.body-section-company{
+.company-image{
     position: relative;
-    left: 750px;
-    bottom: 100px;
+    left: 1100px;
+   
     width: 112px;
-    height: 128,45px;
+    height: 128.45px;
 }
 .company-where > h3{
     background-color: aqua;
     position: relative;
+    top: 50px;
     width: 757px;
     height: 45px;
     left: 250px;
+    font-size: 30px;
 }
 .company-where > h4{
     position: relative;
-    left: 250px;
+    left: 600px;
+   top: 50px;
+    width: 618px;
+    height: 55px;
+    font-size: 22px;
 }
 .company-where > p{
     position: relative;
-    left: 250px;
+    left: 550px;
+    top: 30px;
 }
 .company-hear > h3{
     position: relative;
     left: 250px;
+    top: 70px;
+    width: 609px;
+    height: 43px;
+    font-size: 27.37px;
 }
 .company-hear > blockquote{
     position: relative;
     left: 250px;
+    top: 50px;
+    font-size: 17.25px;
 }
 article > h2{
     position: relative;
     left: 250px;
+    top: 100px;
+    width: 116px;
+    height: 29px;
+    font-size: 24px;
 }
 article > p{
     position: relative;
     left: 250px;
+   top: 100px;
+    width: 769px;
 }
-article > image{
+article > img{
     position: relative;
-    left: 700px;
+    left: 1100px;
+    bottom: 100px;
+    width: 363px;
+    height: 251px;
 }
 .image-products{
     width: 384px;
@@ -224,59 +303,121 @@ article > image{
 }
 .our-products > h2{
     position: relative;
-    left: 700px;
+    left: 350px;
+    top: 150px;
 }
 .employee-app{
     position: relative;
     left: 300px;
+    top: 200px;
+    
+}
+.employee-app > h3{
+    position: relative;
+    width: 324px;
+    height: 60.85px;
+    font-size: 22.5px;
+}
+.employee-app > p{
+    width: 324px;
 }
 .customized-well{
     position: relative;
-    left: 750px;
+    left: 850px;
     bottom: 900px;
+}
+.customized-well > h3{
+    position: relative;
+    width: 324px;
+    height: 60.85px;
+    font-size: 22.5px;
+}
+.customized-well > p{
+    width: 324px;
 }
 .section-company > h2{
     position: relative;
     left: 250px;
+    bottom: 650px;
 }
-.company-building{
+.company-building > img{
     position: relative;
     left: 250px;
+    bottom: 650px;
 }
 .company-building > h3{
     position: relative;
-    left: 250px;
+    left: 750px;
+    bottom: 600px;
+    font-size: 26px;
 }
 .company-building > p{
     position: relative;
-    left: 250px;
+    left: 750px;
+    bottom: 950px;
+    width: 507px;
+    height: 75px;
+    font-size: 21px;
 }
 .company-inclusive{
     position: relative;
     left: 250px;
+    bottom: 600px;
+}
+.company-inclusive > img{
+    position: relative;
+    left: 550px;
+    bottom: 50px;
 }
 .company-inclusive > h3{
     position: relative;
-    left: 250px;
+    left: 100px;
+    font-size: 26px;
 }
 .company-inclusive > p{
     position: relative;
-    left: 250px;
+    bottom: 300px;
+    width: 540px;
+    height: 135px;
+    font-size: 20px;
 }
 .company-workplace{
     position: relative;
     left: 250px;
+   bottom: 750px;
 }
 .company-workplace > h3{
     position: relative;
-    left: 250px;
+    left: 500px;
+    top: 50px;
 }
 .company-workplace > p{
     position: relative;
-    left: 250px;
+    left: 500px;
+   bottom: 250px;
+    width: 520px;
+    height: 168px;
 }
-.section-support{
+.support{
     position: relative;
-    text-align: center;
-    image-orientation: flip;
+    bottom: 700px;
+    left: 300px;
+    display: inline-block;
+    width: 50%;
+}
+.phone-support p{
+    width: 448px;
+    height: 69px;   
+}
+.hs-support{
+    position: relative;
+    left: 800px;
+    bottom: 390px;
+}
+.tutorials{
+    position: relative;
+    left: 300px;
+    bottom: 800px;
+    width: 926px;
+    height: 184px;
 }
