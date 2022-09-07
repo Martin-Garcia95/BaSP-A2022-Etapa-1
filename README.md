@@ -15,5 +15,6 @@
 ###Week 03
     #02-09-22
         Today I fix the syntax error on the html file and created the folder for css
-    #03-09-22
+    #06-09-22
+        Today I worked with the css file to add style elements
     
