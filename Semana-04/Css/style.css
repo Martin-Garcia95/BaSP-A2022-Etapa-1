@@ -1,0 +1,344 @@
+html{
+    overflow: hidden x;
+}
+body{
+    background-color: #fff;
+    color: #373867;
+    font-family: Roboto;
+}
+.aplication-feactures h2{
+    position: relative;
+    left: 400px;
+    top: 390px;
+    width: 386px;
+    height: 47px;
+    font-size: 40px;
+}
+.hour-resource{
+    position: relative;
+    left: 400px;
+    top: 450px;
+    font-size: 30px;
+}
+.hour-resource img{
+    border-style: solid;
+    background-color: #aace9b;
+}
+.reports-roles{
+    position: relative;
+    left: 900px;
+    bottom: 85px;
+    font-size: 30px;
+}
+.reports-roles img{
+    border-style: solid;
+    background-color: #aace9b;
+}
+.wsyut h2{
+    position: relative;
+    left: 580px;
+    top: 100px;
+    font-size: 40px;
+}
+.wsyut div h3{
+    font-size: 30px;
+}
+.productivity-booster h3{
+    position: relative;
+    top: 200px;
+    left: 550px;
+}
+.productivity-booster p{
+    position: relative;
+    top: 90px;
+    left: 555px;
+    width: 270px;
+    height: 92px;
+    font-size: 20px;
+}
+.productivity-booster img{
+    border-style: solid;
+    position: relative;
+    left: 410px;
+    top: 160px;
+    background-color: #aace9b;
+}
+.leadership h3{
+    position: relative;
+    top: 170px;
+    left: 550px;
+    width: 260px;
+    height: 65px;
+}
+.leadership p{
+    position: relative;
+    top: 80px;
+    left: 555px;
+    width: 350px;
+    height: 168px;
+    font-size: 20px;
+}
+.leadership img{
+    position: relative;
+    left: 420px;
+    top: 110px;
+    border-style: solid;
+    background-color: #aace9b;
+}
+.work-traceability h3{
+    position: relative;
+    bottom: 390px;
+    left: 1050px;
+}
+.work-traceability p{
+    position: relative;
+    bottom: 480px;
+    left: 1055px;
+    width: 275px;
+    height: 48px;
+    font-size: 20px;
+}
+.work-traceability img{
+    position: relative;
+    bottom: 420px;
+    left: 950px;
+    border-style: solid;
+    background-color: #aace9b;
+}
+.decision-making h3{
+    position: relative;
+    bottom: 345px;
+    left: 1050px;
+}
+.decision-making p{
+    position: relative;
+    bottom: 450px;
+    left: 1055px;
+    width: 275px;
+    height: 48px;
+    font-size: 20px;
+}
+.decision-making img{
+    position: relative;
+    bottom: 400px;
+    left: 920px;
+    border-style: solid;
+    background-color: #aace9b;
+}
+.inscription-form h2{
+    position: relative;
+    width: 178px;
+    height: 28px;
+    left: 420px;
+    bottom: 50px;
+    font-style: 24px;
+    font-weight: bold;
+}
+.inscription-form form input{
+    position: relative;
+    left: 320px;
+    bottom: 30px;
+    width: 500px;
+    height: 37px;
+}
+.companys-mission{
+    background-color: rgba(198, 226, 229, 0.65);
+}
+.companys-mission h2{
+    position: relative;
+    left: 320px;
+    bottom: 100px;
+
+}
+.company-image{
+    position: relative;
+    left: 1300px;
+    bottom: 200px;
+    width: 112px;
+    height: 128.45px;
+}
+.company-where h3{
+    position: relative;
+    bottom: 200px;
+    width: 757px;
+    height: 45px;
+    left: 320px;
+    font-size: 30px;
+}
+.company-where h4{
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+    width: 618px;
+    height: 55px;
+    font-size: 22px;
+}
+.company-where p{
+    position: relative;
+    left: 550px;
+    bottom: 200px;
+    width: 50%;
+    height: 35px;
+}
+.company-hear > h3{
+    position: relative;
+    left: 320px;
+    bottom: 190px;
+    width: 609px;
+    height: 43px;
+    font-size: 27.37px;
+}
+.company-hear blockquote{
+    position: relative;
+    left: 330px;
+    bottom: 200px;
+    font-size: 17.25px;
+    width: 50%;
+}
+article h2{
+    position: relative;
+    left: 250px;
+    bottom: 250px;
+    width: 116px;
+    height: 29px;
+    font-size: 24px;
+}
+article p{
+    position: relative;
+    left: 320px;
+   bottom: 100px;
+    width: 769px;
+}
+article img{
+    position: relative;
+    left: 1100px;
+    bottom: 300px;
+    width: 363px;
+    height: 251px;
+}
+.image-products{
+    width: 384px;
+    height: 284px;
+}
+.our-products h2{
+    position: relative;
+    left: 320px;
+    bottom: 200px;
+}
+.employee-app{
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+    
+}
+.employee-app h3{
+    position: relative;
+    width: 324px;
+    height: 60.85px;
+    font-size: 22.5px;
+}
+.employee-app p{
+    width: 324px;
+}
+.customized-well{
+    position: relative;
+    left: 850px;
+    bottom: 1295px;
+}
+.customized-well h3{
+    position: relative;
+    width: 324px;
+    height: 60.85px;
+    font-size: 22.5px;
+}
+.customized-well p{
+    width: 324px;
+}
+.section-company h2{
+    position: relative;
+    left: 320px;
+    bottom: 1100px;
+}
+.company-building img{
+    position: relative;
+    left: 320px;
+    bottom: 1150px;
+}
+.company-building h3{
+    position: relative;
+    left: 820px;
+    bottom: 1100px;
+    font-size: 26px;
+}
+.company-building p{
+    position: relative;
+    left: 820px;
+    bottom: 1450px;
+    width: 507px;
+    height: 75px;
+    font-size: 21px;
+}
+.company-inclusive{
+    position: relative;
+    left: 320px;
+    bottom: 1150px;
+}
+.company-inclusive img{
+    position: relative;
+    left: 550px;
+    bottom: 50px;
+}
+.company-inclusive h3{
+    position: relative;
+    left: 100px;
+    font-size: 26px;
+}
+.company-inclusive p{
+    position: relative;
+    bottom: 350px;
+    width: 540px;
+    height: 135px;
+    font-size: 20px;
+}
+.company-workplace{
+    position: relative;
+    left: 320px;
+   bottom: 1300px;
+}
+.company-workplace h3{
+    position: relative;
+    left: 500px;
+    top: 50px;
+    font-size: 26px;
+}
+.company-workplace p{
+    position: relative;
+    left: 500px;
+   bottom: 280px;
+    width: 520px;
+    height: 168px;
+    font-size: 20px;
+}
+.support{
+    position: relative;
+    bottom: 1200px;
+    left: 300px;
+    display: inline-block;
+    width: 50%;
+}
+.phone-support p{
+    width: 448px;
+    height: 69px;   
+}
+.hs-support{
+    position: relative;
+    left: 700px;
+    bottom: 390px;
+}
+.tutorials{
+    position: relative;
+    left: 300px;
+    bottom: 1400px;
+    width: 926px;
+    height: 184px;
+}

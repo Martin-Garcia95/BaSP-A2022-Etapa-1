@@ -1,0 +1,62 @@
+header{
+    position: fixed;
+    z-index: 1;
+    background-color: #373867;
+    width: 1512px;
+    height: 91px;
+    bottom: 1580px;
+
+}
+header h1{
+    position: fixed;
+    width: 366px;
+    height: 70px;
+    left: 600px;
+    top: 15px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #46a07b;
+}
+header img{
+    position: fixed;
+    width: 65px;
+    height: 67px;
+    left: 10px;
+    top: 10px;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    font-size: 17px;
+    left: 262px;
+    top: 88px;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    color: #46a07b;
+}
+nav button{
+    width: 210px;
+    height: 55px;
+    background-color: #373867;
+}
+nav ul{
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav li{
+  float: left;
+}
+nav li a{
+  display: block;
+  padding: 8px;
+  color: #46a07b;
+  background-color: #373867;
+  width: 160px;
+  height: 55px;
+  font-size: 20px;
+  text-align: inherit;
+}
