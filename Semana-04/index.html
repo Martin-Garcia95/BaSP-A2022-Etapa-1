@@ -1,111 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>
-            TRACKGENIX
-        </title>
-        <link rel="stylesheet" type="text/css" href="Css/reset.css">
-        <link rel="stylesheet" type="text/css" href="Css/style.css">
-        <link rel="stylesheet" type="text/css" href="Css/header.css">
-        <link rel="stylesheet" type="text/css" href="Css/sidebar.css">
-        <link rel="stylesheet" type="text/css" href="Css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Trackgenix</title>
     </head>
     <body> 
-        <header>
-            <img class="body-header-image" src="images/Group 23.png" alt="RadiumRocket">
-                <h1>
-                    TRACKGENIX 
-                </h1>
-            <nav class="navigation">
-                <ul>
-                    <li>
-                        <button>
-                            <a href="#aplication-feactures">
-                                Feactures
-                            </a>
-                        </button>
+        <header class="header">
+            <a href="#welcome-section">
+                <img class="logo" src="./images/radiumrocketlogo.png" alt="radium-rocket-logo">
+            </a>
+            <h1>Trackgenix</h1>
+        </header>
+            <nav class="nav-main">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a class="nav-item-a vertical-align" href="#features">Features</a>
                     </li>
-                    <li>
-                        <button>
-                            <a href="#wsyut">
-                                Why Should You Use TrackGenix
-                            </a>
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-item-a" href="#why-should">Why Should You Use Trackgenix</a>
                     </li>
-                    <li>
-                        <button>
-                            <a href="#companys-mission">
-                                History
-                            </a>
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-item-a vertical-align" href="#mission">History</a>
                     </li>
-                    <li>
-                        <button>
-                            <a href="#our-products">
-                                Products
-                            </a>
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-item-a vertical-align" href="#products">Products</a>
                     </li>
-                     <li>
-                        <button>
-                            <a href="#about-us">
-                                About Us
-                            </a>
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-item-a vertical-align" href="#company">About Us</a>
                     </li>
-                    <li>
-                        <button>
-                            <a href="#support">
-                                Support
-                            </a>
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-item-a vertical-align" href="#support">Support</a>
                     </li>
                 </ul>
             </nav>
-        </header>
-        <aside>
-            <input type="text" placeholder="Search...">    
-                <menu>
-                    <ul>
-                       <li>
-                            <a href="#home">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Sign In
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Log In
-                        </a>
-                        </li>
-                        <li>
-                            <a href="#inscription-form">
-                                Contact Information
-                            </a>
-                        </li>
-                    </ul>
-                </menu>             
-            <img src="images/Group 23.png" alt="RadiumRocket">
-                <p>
-                    Developed by GigaTech Software Solutions S.A
-                </p>
+        <aside class="aside">
+            <form>
+                <input type="search" placeholder="Search">
+            </form>
+            <h3 class="aside-h3">Menu</h3>
+            <nav class="nav-aside">
+                <ul class="nav-aside-ul">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Sing up</a>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact information</a>
+                    </li>
+                </ul>
+            </nav>
+            <img class="logo-aside" src="./images/radiumrocketlogo.png" alt="radium-rocket-logo">
+            <p>Developed by GigaTech Software Solutions S.A.</p>
         </aside>
     <main id="home">
         <section>
         <h2>
             WELCOME
         </h2>
+        <div>
         <h3>
             "TRACKGENIX" is a revolutionary system designed for GigaTech Software Solutions SA.
             This system will allow them to efficiently manage their proyects, schedule flow, 
             selected work teams and much more
         </h3>
+        </div>
+        <div class="security">
             <img src="images/Rectangle2.png" alt="Security">
+        </div>
         </section>
     </main>
     <section  class="aplication-feactures">    
@@ -181,8 +150,8 @@
                 Inscription Form
             </h2>
             <form action="">
-                <input type="text" name="" id="" placeholder="Name">
-                <input type="text" name="" id="" placeholder="Email">
+                <input placeholder="Name">
+                <input placeholder="Email">
                 <select>
                     <option hidden selected>
                         -Choose Contact Area
@@ -198,7 +167,7 @@
                     </option>
                 </select>
                 <p>
-                    <input type="text" name="" id="" placeholder="Insert Text...">
+                    <input type="text" placeholder="Insert Text...">
                 </p>
                 <input type="checkbox"/>
                     <label>
@@ -272,7 +241,7 @@
                 Our Products
             </h2>
                 <div class="employee-app">
-                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/Sistemas-de-control-de-acceso-cedab0aa.png">
+                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/Sistemas-de-control-de-acceso-cedab0aa.png" alt="image-products-first">
                     <h3>
                         Employee time control from any place and device
                     </h3>
@@ -293,7 +262,7 @@
                                 Biometric recognition devices
                             </li>
                         </ul>
-                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/App-de-control-horario-0c73943d.png">
+                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/App-de-control-horario-0c73943d.png" alt="image-products-second">
                     <h3>
                         The most intuitive time control app
                     </h3>
@@ -313,7 +282,7 @@
                         </ul>
                 </div>
                 <div class="customized-well">
-                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/Software-de-horarios-de-trabajo-b2118266.png">
+                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/images_blocks/Software-de-horarios-de-trabajo-b2118266.png" alt="image-products-third">
                     <h3>
                         Customized working day registration policies
                     </h3>
@@ -332,7 +301,7 @@
                                 Flexible entry and exit
                             </li>
                         </ul>
-                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/image_header_hr_database-423ad038.png">
+                    <img class="image-products" src="https://cdn.bizneo.com/assets/images/image_header_hr_database-423ad038.png" alt="image-products-forth">
                     <h3>
                         Project Management Done Well
                     </h3>

@@ -1,36 +1,5 @@
-aside{
-    position: fixed;
-    height: 952px;
-    width: 255px;
-    left: 5px;
-    top: 92px;
-    color: #46a07b;
-    background-color: #EBECF0;
-}
-aside menu{
-    position: relative;
-    top: 100px;
-    left: 30px;
-    font-size: 17px;
-}
-aside a{
-    color: #46a07b;
-}
-aside input{
-    width: 236px;
-    height: 30.49px;
-}
-aside > img{
-    position: relative;
-    width: 66px;
-    height: 75px;
-    left: 80px;
-    top: 640px;
-}
-aside p{
-    position: relative;
-    top: 650px;
-    left: 15px;
-    font-size: 11px;
-    color: #373867;
+.sidebar{
+    display: hidden;
+
+    
 }

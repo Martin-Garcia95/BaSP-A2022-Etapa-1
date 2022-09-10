@@ -1,28 +1,15 @@
-main section h2{
+#home h2{
     position: relative;
-    left: 600px;
-    top: 200px;
-    font-size: 50px;
-    font-family: Roboto;
+    top: 10px;
+    left: 90px;
+    width: 184px;
+    font-size: 3.8em;
+    border: 1px;
     border-style: solid;
-    border-color: #0a0a0a;
-    padding: 20px;
-    margin: 20px;
-    width: 307px;
-    background-color: #46a07b;
+    background-color: aqua;
 }
-main section h3{
+#home img{
     position: relative;
-    font-size: 28.85px;
-    width: 546px;
-    height: 457,4px;
-    left: 350px;
-    top: 300px;
-}
-main section img{
-    position: relative;
-    left: 950px;
-    top: 70px;
-    width: 500px;
-    height: 272.52px;
+    bottom: 10px;
+
 }
