@@ -4,14 +4,14 @@ header{
     align-items: center;
     justify-content: space-between;
     top: 0%;
-    background-color: brown;
+    background-color: #373867;
     z-index: 1;
     width: 100%;
 }
 header h1{
-    background-color: aqua;
     color: #46a07b;
     font-size: 3rem;
+    font-weight: bold;
 }
 header img{
     width: 58.66px;

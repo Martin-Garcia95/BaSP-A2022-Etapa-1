@@ -1,5 +1,6 @@
 html{
     overflow-x: hidden;
+    font-family: 'Roboto';
     font-size: 62.5%
 }
 
@@ -7,8 +8,8 @@ body{
     overflow-x: hidden;
     padding: 0;
     margin: 0;
-    background-color: rgba(198, 226, 229, 0.81);
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: #fff;
 }
 body img{
     max-width: 300px;

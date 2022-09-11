@@ -17,4 +17,10 @@
         Today I fix the syntax error on the html file and created the folder for css
     #06-09-22
         Today I worked with the css file to add style elements
+###Week 04
+    09-09-22
+        Today I created the "week 04" folder
+    10-09-22
+        Today I worked on the css file while doing some meets
+    
     

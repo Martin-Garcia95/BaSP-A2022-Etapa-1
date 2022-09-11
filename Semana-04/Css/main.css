@@ -4,68 +4,169 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: aqua;
 }
-.hour-log{
-    background-color: blue;
+.home h2{
+    font-size: 3.8rem;
+    margin: 10%;
+}
+.home p{
+    font-size: 2rem;
+    margin: 7%;
+}
+.trackgenix-home{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
 }
-.hour-log img{
+.feactures img{
     width: 112px;
     height: 107px;
 }
-.reports{
+.feactures h2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.hour-report{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: end;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    margin: 10%;
 }
-.reports img{
-    width: 112px;
-    height: 107px;
-}
-.resource-management{
+.resource-roles{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    margin: 10%;
 }
-.resource-management img{
-    width: 112px;
-    height: 107px;
-}
-.multiple-roles{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.multiple-roles img{
-    width: 112px;
-    height: 107px;
+.wysut{
+    padding: 5%;
 }
 .wysut h2{
     text-align: center;
     font-size: 1.7rem;
+    margin: 5%;
+}
+.wysut h3{
+    font-size: 1.8rem;
+}
+.wysut p{
+    font-size: 1.2rem;
 }
 .wysut img{
     width: 77px;
     height: 78px;
 }
+.productivity-booster{
+    display: flex;
+    align-items: center;
+}
+.booster{
+    text-align: center;
+}
+.work-traceaebility{
+    display: flex;
+    align-items: center;
+}
+.traceability{
+    text-align: center;
+}
+.leadership{
+    display: flex;
+    align-items: center;
+}
+.team-management{
+    text-align: center;
+}
+.decision-making{
+    display: flex;
+    align-items: center;
+}
+.making{
+    text-align: center;
+}
 .inscription h2{
     font-size: 2.4rem;
+    padding: 3%;
 }
 .inscription form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+.input-text{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-email{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-contact{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-text-area{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
 .companys-mission h2{
     font-size: 2.2rem;
+    padding: 1%;
+    margin: 2%;
 }
-.companys-mission h3{
+.company-head{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.company-head h3{
     font-size: 2.3rem;
+    width: 60%;
+    margin: 3%;
+}
+.article-company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+    line-height: 2;
+}
+.article-company h3{
+    font-size: 1.6rem;
+}
+.quote{
+text-align: center;
+}
+.quote h3{
+    font-size: 2rem;
+}
+.quote q{
+    font-size: 1.6rem;
+}
+.products h2{
+    font-size: 2.6rem;
+}
+.about-us{
+    padding: 4%;
+}
+.about-us h3{
+    font-size: 1.8rem;
+}
+.about-us p{
+    font-size: 1.5rem;
+}
+.about-us-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2;
 }
 .products h2{
     font-size: 2.6rem;
@@ -77,9 +178,63 @@
     width: 333px;
     height: 246px;
 }
+.our-products-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
+}
 .company h2{
     font-size: 2.6rem;
 }
+.company h3{
+    font-size: 1.6rem;
+}
 .company p{
     font-size: 1.3rem;
+}
+.company-first{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+.company-second{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    padding: 3%
+}
+.company-third{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+.support h2{
+    font-size: 2.6rem;
+    padding: 2%;
+}
+.assitence{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+.tutorials{
+    padding: 6%;
+}
+.tutorials h3{
+font-size: 2.8rem;
+padding: 2%;
+}
+.tutorials ul{
+    line-height: 1.7;
+}
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
 }
