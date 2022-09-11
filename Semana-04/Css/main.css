@@ -1,15 +1,85 @@
-#home h2{
-    position: relative;
-    top: 10px;
-    left: 90px;
-    width: 184px;
-    font-size: 3.8em;
-    border: 1px;
-    border-style: solid;
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: aqua;
 }
-#home img{
-    position: relative;
-    bottom: 10px;
-
+.hour-log{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.hour-log img{
+    width: 112px;
+    height: 107px;
+}
+.reports{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+}
+.reports img{
+    width: 112px;
+    height: 107px;
+}
+.resource-management{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.resource-management img{
+    width: 112px;
+    height: 107px;
+}
+.multiple-roles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.multiple-roles img{
+    width: 112px;
+    height: 107px;
+}
+.wysut h2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.wysut img{
+    width: 77px;
+    height: 78px;
+}
+.inscription h2{
+    font-size: 2.4rem;
+}
+.inscription form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.companys-mission h2{
+    font-size: 2.2rem;
+}
+.companys-mission h3{
+    font-size: 2.3rem;
+}
+.products h2{
+    font-size: 2.6rem;
+}
+.products h3{
+    font-size: 1.8rem;
+}
+.products img{
+    width: 333px;
+    height: 246px;
+}
+.company h2{
+    font-size: 2.6rem;
+}
+.company p{
+    font-size: 1.3rem;
 }

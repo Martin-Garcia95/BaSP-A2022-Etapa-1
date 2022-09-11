@@ -1,18 +1,24 @@
 header{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0%;
     background-color: brown;
+    z-index: 1;
+    width: 100%;
 }
 header h1{
-    position: fixed;
     background-color: aqua;
     color: #46a07b;
-    font-size: 3em;
-    top: 20px;
-    left: 95px;
+    font-size: 3rem;
 }
 header img{
     width: 58.66px;
     height: 67px;
 }
-.navigation{
-    display: none;
+@media only screen and (max-width: 734px) {
+    .nav-main {
+      display: none;
+    }
 }
