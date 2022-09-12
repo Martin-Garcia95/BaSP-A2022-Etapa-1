@@ -5,3 +5,9 @@ footer{
     display: flex;
     justify-content: space-around;
 }
+@media (min-width: 734px){
+    footer{
+    width: 70%;
+    margin-left: 30%;
+    }
+}

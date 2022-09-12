@@ -1,11 +1,14 @@
+@media (min-width: 734px){
+    .hamburguer-menu{
+    visibility:hidden ;
+    }
+}
 header{
-    position: sticky;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 0%;
     background-color: #373867;
-    z-index: 1;
     width: 100%;
 }
 header h1{
@@ -16,9 +19,4 @@ header h1{
 header img{
     width: 58.66px;
     height: 67px;
-}
-@media only screen and (max-width: 734px) {
-    .nav-main {
-      display: none;
-    }
 }

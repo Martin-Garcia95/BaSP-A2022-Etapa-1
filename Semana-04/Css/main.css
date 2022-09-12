@@ -5,9 +5,21 @@
     align-items: center;
     width: 100%;
 }
+@media (min-width: 734px){
+    #main{
+        width: 70%;
+        margin-left: 30%;
+    }
+}
 .home h2{
     font-size: 3.8rem;
-    margin: 10%;
+    margin-top: 30%;
+    margin-bottom: 15%;
+    border: 2px;
+    border-style: solid;
+    border-radius: 20%;
+    padding: 15px;
+    background-color: #E6F1E1;
 }
 .home p{
     font-size: 2rem;
@@ -21,21 +33,28 @@
 .feactures img{
     width: 112px;
     height: 107px;
+    border: 1px;
+    border-style: solid;
+    background-color: #E6F1E1;
 }
 .feactures h2{
     text-align: center;
     font-size: 1.7rem;
 }
+.feactures h3{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
 .hour-report{
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 10%;
 }
 .resource-roles{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     margin: 10%;
 }
@@ -141,6 +160,9 @@
 .article-company h3{
     font-size: 1.6rem;
 }
+.article-company p{
+    font-size: 1.2rem;
+}
 .quote{
 text-align: center;
 }
@@ -150,8 +172,8 @@ text-align: center;
 .quote q{
     font-size: 1.6rem;
 }
-.products h2{
-    font-size: 2.6rem;
+.quote cite{
+    font-size: 1.5rem;
 }
 .about-us{
     padding: 4%;
@@ -173,6 +195,9 @@ text-align: center;
 }
 .products h3{
     font-size: 1.8rem;
+}
+.products p{
+    font-size: 1.1rem;
 }
 .products img{
     width: 333px;
@@ -222,6 +247,7 @@ text-align: center;
     padding: 10%;
     line-height: 1.5;
     font-size: 1.6rem;
+    text-align: center;
 }
 .tutorials{
     padding: 6%;

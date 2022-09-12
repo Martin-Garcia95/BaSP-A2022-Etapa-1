@@ -3,6 +3,26 @@ html{
     font-family: 'Roboto';
     font-size: 62.5%
 }
+@media only screen and (max-width: 734px) {
+    .nav-main {
+      display: none;
+    }
+}
+.nav-main{
+    text-align: center;
+    margin-top: 10%;
+    position: fixed;
+    margin-left: 27%;
+    width: 75%;
+    background-color: #373867;
+}
+.nav-main li{
+    display: inline;
+}
+.nav-main ul{
+    border: 2px;
+    border-style: solid;
+}
 
 body{
     overflow-x: hidden;
