@@ -1,8 +1,8 @@
-#Trackgenix
+# Trackgenix
     -Descripcion
     1- Go to folder "Semana-02"
     2- Select the "index.html" file and open it in you browser
-###Week 02
+### Week 02
     #26-08-22
         Today I created the project file for BaSP
         I started with the README file and the folder
@@ -12,12 +12,12 @@
     Today I worked on Company section plus another ones
     #30-08-22
     Today I complete the last section along with the footer
-###Week 03
+### Week 03
     #02-09-22
         Today I fix the syntax error on the html file and created the folder for css
     #06-09-22
         Today I worked with the css file to add style elements
-###Week 04
+### Week 04
     09-09-22
         Today I created the "week 04" folder
     10-09-22
