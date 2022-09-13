@@ -15,8 +15,14 @@
   font-size: 1.8rem;
   font-weight: bold;
 }
+.nav-aside a{
+  font-size: 1.6rem;
+  line-height: 25px;
+  color: #46a07b;
+}
 @media (min-width: 768px) {
     .sidebar {
       display: flex;
+      max-width: 320px;
     }
 }
