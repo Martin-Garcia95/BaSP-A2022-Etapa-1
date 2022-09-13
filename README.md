@@ -22,5 +22,5 @@
         Today I created the "week 04" folder
     10-09-22
         Today I worked on the css file while doing some meets
-    
-    
+    13-09-22 
+        Finishing the project with css/flexbox
