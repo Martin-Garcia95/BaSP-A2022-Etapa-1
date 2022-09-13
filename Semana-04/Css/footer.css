@@ -4,8 +4,9 @@ footer{
 .footer{
     display: flex;
     justify-content: space-around;
+    background: #373867;
 }
-@media (min-width: 734px){
+@media (min-width: 768px){
     footer{
     width: 70%;
     margin-left: 30%;

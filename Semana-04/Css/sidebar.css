@@ -1,17 +1,22 @@
 .sidebar{
-  height: 952px;
+  display: none;
   position: fixed;
-  border: 1px;
-  margin-top: 8.5%;
-  border-style: solid;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
   width: 30%;
+  top: 91px;
+  height: 100%;
+  border: 1px;
+  border-style: solid;
+  align-items: center;
   background-color: #EBECF0;
 }
-@media (max-width: 734px) {
+.sidebar h3{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
     .sidebar {
-      display: none;
+      display: flex;
     }
 }
