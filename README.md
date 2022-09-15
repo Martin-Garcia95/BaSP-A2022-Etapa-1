@@ -24,3 +24,7 @@
         Today I worked on the css file while doing some meets
     13-09-22 
         Finishing the project with css/flexbox
+### Week 05
+    15-09-22
+        Creation of the folder "Semana-05" and the js files with a nex index.html
+        
