@@ -27,4 +27,5 @@
 ### Week 05
     15-09-22
         Creation of the folder "Semana-05" and the js files with a nex index.html
-        
+    16-09-22
+        Today I worked on the variables and operators file, along with the string one
