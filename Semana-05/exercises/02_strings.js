@@ -38,5 +38,11 @@ console.log(ninethStringTest);
 
 console.log('-Exercise 2.f:');
 var tenthStringTest = 'rADIUM rOCKET';
-var eleventhStringTest = tenthStringTest.substring(0,1).toUpperCase() + tenthStringTest.substring(1,6).toLowerCase() + ' ' + tenthStringTest.substring(7,8).toUpperCase()+ tenthStringTest.substring(8,13).toLowerCase();
-console.log(eleventhStringTest);
+
+var eleventhStringTest = tenthStringTest.substring(0,1).toUpperCase() + tenthStringTest.substring(1, tenthStringTest.indexOf(' ')).toLowerCase();
+
+var twelfthStringTest = tenthStringTest.substring(tenthStringTest.indexOf(' ') +1, tenthStringTest.indexOf(' ') +2).toUpperCase() + tenthStringTest.substring(tenthStringTest.indexOf(' ') +2).toLowerCase();
+
+var stringResult = eleventhStringTest + ' ' + twelfthStringTest
+
+console.log(stringResult);

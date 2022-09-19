@@ -16,7 +16,6 @@ header img{
     width: 58.66px;
     height: 67px;
 }
-
 .nav-main {
     display: none;
     z-index: 1;
@@ -49,11 +48,9 @@ header img{
 }
 @media (min-width: 768px) {
     .nav-main {
-      display: flex;
+        display: flex;
     }
-}
-@media (min-width: 768px){
     .hamburguer-menu{
-    visibility:hidden ;
+        visibility:hidden ;
     }
 }
