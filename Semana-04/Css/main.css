@@ -10,9 +10,10 @@
 .home h2{
     margin-top: 30%;
     margin-bottom: 15%;
-    border: 2px;
-    border-style: solid;
-    border-radius: 20%;
+    box-sizing: border-box;
+    background: rgba(170, 206, 155, 0.53);
+    border: 2px solid #00000070;
+    border-radius: 20px;
     padding: 15px;
     font-size: 3.8rem;
     background-color: #E6F1E1;

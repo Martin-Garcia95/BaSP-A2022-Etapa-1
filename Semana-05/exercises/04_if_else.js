@@ -27,7 +27,7 @@ if (age < 2) {alert ('Bebe')
     
 } else if (age >= 2 && age <= 12) {alert ('Niño', age)
     
-} else if (age >= 13 && age <= 19) {alert ('Adolescentea', age)
+} else if (age >= 13 && age <= 19) {alert ('Adolescente', age)
     
 } else if (age >= 20 && age <= 30) {alert ('Joven', age)
     
