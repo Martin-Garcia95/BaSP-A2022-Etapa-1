@@ -1,0 +1,22 @@
+.inscription-div{
+    display: flex;
+    margin-top: 200px;
+    width: 80%;
+    padding: 1.3rem;
+    max-width: 400px;
+    background-color: rgb(189, 189, 233);
+    margin-left: 20%;
+    justify-content: center;
+}
+
+.border-green{
+    border: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+.border-red{
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+}

@@ -3,19 +3,19 @@
     1- Go to folder "Semana-02"
     2- Select the "index.html" file and open it in you browser
 ### Week 02
-    #26-08-22
+    26-08-22
         Today I created the project file for BaSP
         I started with the README file and the folder
-    #27-08-22 
+    27-08-22 
         Today I advanced with more "body" sections of the landing page
-    #28-08-22
-    Today I worked on Company section plus another ones
-    #30-08-22
-    Today I complete the last section along with the footer
+    28-08-22
+        Today I worked on Company section plus another ones
+    30-08-22
+        Today I complete the last section along with the footer
 ### Week 03
-    #02-09-22
+    02-09-22
         Today I fix the syntax error on the html file and created the folder for css
-    #06-09-22
+    06-09-22
         Today I worked with the css file to add style elements
 ### Week 04
     09-09-22
@@ -24,6 +24,7 @@
         Today I worked on the css file while doing some meets
     13-09-22 
         Finishing the project with css/flexbox
+
 ### Week 05
 
     GitHubpages: https://steampunkmatu.github.io/BaSP-A2022-Etapa-1/Semana-05/index.html
@@ -52,3 +53,7 @@
         Today I worked with the for file on javascript
     20-09-22
         Today I worked on the last exercise and added some styles to the css file from week 04
+
+### Week 06
+    29-09-22
+        Today i created the folder week 06 along with the new files for login and sign up section
