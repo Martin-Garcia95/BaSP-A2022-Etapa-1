@@ -55,5 +55,7 @@
         Today I worked on the last exercise and added some styles to the css file from week 04
 
 ### Week 06
-    29-09-22
+    23-09-22
         Today i created the folder week 06 along with the new files for login and sign up section
+    25-09-22
+        Today i worked with the login section of the html, js and css

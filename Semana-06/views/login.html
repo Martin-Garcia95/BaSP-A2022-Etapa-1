@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../Css/main.css">
         <link rel="stylesheet" href="../Css/footer.css">
         <link rel="stylesheet" href="../Css/login.css">
+        <script src="../javascript/login.js"></script>
         <title>Trackgenix</title>
     </head>
     <body>
@@ -54,16 +55,16 @@
             <nav class="nav-aside">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#">Sing up</a>
+                        <a href="../views/sign-up.html">Sign up</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="../views/login.html">Login</a>
                     </li>
                     <li>
-                        <a href="#">Contact information</a>
+                        <a href="#contact">Contact information</a>
                     </li>
                 </ul>
             </nav>
@@ -81,9 +82,7 @@
                     </h2>
                     <div class="form-input-group">
                         <input type="text" id="form-input" autofocus placeholder="Username or email">
-                    <div class="form-input-group">
                         <input type="password" id="form-input-two" autofocus placeholder="password">
-                    </div>
                     <button id="form-button" type="submit">
                         Continue
                     </button>
@@ -93,10 +92,11 @@
                         </a>
                     </p>
                     <p class="form-text">
-                        <a href="#" class="form-link">
+                        <a href="../views/sign-up.html" class="form-link">
                             Create account
                         </a>
                     </p>
+                </div>
                 </form>
             </div>
         </section>
@@ -123,6 +123,5 @@
                 Copyright © 2022 Gigatech Software Solutions. All right reserved.                                           
             </p>
         </footer>
-        <script src="../javascript/login.js"></script>
         </body>
 </html>
