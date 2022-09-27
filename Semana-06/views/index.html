@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <link rel="stylesheet" href="../Css/reset.css">
         <link rel="stylesheet" href="../Css/style.css">
         <link rel="stylesheet" href="../Css/header.css">
@@ -171,13 +171,13 @@
                 </article>
             </div>
         </section>
-        <section id="contact" class="inscription">
-            <h2>
+        <section class="inscription">
+            <h2 id="contact">
                 Inscription form
             </h2>
             <form>
-                <input class="input-text" type="text" name="name" placeholder="Name">
-                <input class="input-email" type="email" name="email" placeholder="Email">
+                <input class="input-text" id="input-text" type="text" placeholder="Name">
+                <input class="input-email" id="input-email" type="email" name="email" placeholder="Email">
                 <select class="input-contact" name="contact">
                     <option hidden selected>
                         Contact area
@@ -192,9 +192,9 @@
                         Merchandising
                     </option>
                 </select>
-                <textarea class="input-text-area"
+                <textarea class="input-text-area" id="input-text-area"
                     placeholder="Enter your text here..."></textarea>
-                <input class="input-button" type="submit" value="Send">
+                <input class="input-button" id="input-button" type="submit" value="Send">
             </form>
         </section>
         <section class="companys-mission">

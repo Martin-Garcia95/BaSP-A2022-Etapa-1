@@ -1,10 +1,13 @@
 window.onload = function ()  {
     var inputEmail = document.getElementById("form-input");
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var passwordExpression = /^[A-Za-z0-9]*$/;
     var inputPassword = document.getElementById("form-input-two");
     var inputButton = document.getElementById("form-button")
-    
+    var falseEmail= 'Email incorrecto: ';
+    var falsePassword= 'Contrase;a incorrecta: '
+    var trueEmail= 'Email: ';
+    var truePassword= 'Contrase;a: ';
+
     //Email
     var errorTextEmail = document.createElement("p");
     inputEmail.onblur = function(){
@@ -33,42 +36,34 @@ window.onload = function ()  {
     }
 
     //Password
-    var errorTextPassword = document.createElement("p");
     inputPassword.onblur = function(){
-        if(!inputPassword.value.match(passwordExpression)){
+        if(!onlyNumbersAndLetters(inputPassword)){
             inputPassword.classList.add("border-red");
-            errorTextPassword.classList.add("parragraph-password")
-            errorTextPassword.innerHTML = "Poner buen password";
-            inputPassword.parentNode.insertBefore(errorTextPassword, inputPassword.nextSibling)
-            console.log(errorTextPassword)
-        }else if(inputPassword.value.length < 3){
+                textError.classList.add("parragraph-Email")
+                textError.innerHTML = "Usar parametro valido";
+                inputPassword.parentNode.insertBefore(textError, inputPassword.nextSibling)
+        }else if(inputPassword.value.length < 8){
             inputPassword.classList.add("border-red");
-            errorTextPassword.classList.add("parragraph-password")
-            errorTextPassword.innerHTML = "Poner buen password";
-            inputPassword.parentNode.insertBefore(errorTextPassword, inputPassword.nextSibling)
-            console.log("necesita mas caracteres");
+            textError.classList.add("parragraph-Email")
+            textError.innerHTML = "Faltan letras";
+            inputPassword.parentNode.insertBefore(textError, inputPassword.nextSibling)
         }else{
-            console.log('Buen passwprd');
-            inputPassword.classList.add("border-green")
+            inputPassword.classList.add("border-green");
         }
     }
-    
     inputPassword.onfocus = function(){
-        inputPassword.value = "";
-        inputPassword.classList.remove("border-red");
-        errorTextPassword.remove();
-    }
+            inputPassword.value = "";
+            inputPassword.classList.remove("border-red");
+            textError.remove()
+         }
 
-    var falseEmail= 'Email incorrecto: ';
-    var falsePassword= 'Contrase;a incorrecta: '
-    var trueEmail= 'Email: ';
-    var truePassword= 'Contrase;a: ';
+    
     inputButton.onclick = function(e){
         e.preventDefault();
         if (inputEmail.classList.contains("border-red") && inputPassword.classList.contains("border-red")){
             falseEmail += inputEmail.value;
             falsePassword += inputPassword.value;
-            alert(falseEmail + '\n' + falsePassword);
+            alert(falseEmail + '/n' + falsePassword);
         }else if(inputEmail.classList.contains("border-red")){
             falseEmail += inputEmail.value;
             alert(falseEmail);
@@ -85,7 +80,7 @@ window.onload = function ()  {
                 console.log(trueEmail);
                 truePassword += inputPassword.value;
                 console.log(truePassword)
-                alert(trueEmail + "\n" + truePassword)
+                alert("Success "+ "\n" + trueEmail + "\n" + truePassword)
             }
         }
     }

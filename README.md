@@ -59,3 +59,7 @@
         Today i created the folder week 06 along with the new files for login and sign up section
     25-09-22
         Today i worked with the login section of the html, js and css
+    26-09-22
+        Today i worked with my coworkers during a meet to learn more about js
+    27-09-22
+        Today i can complete the project with all the details
