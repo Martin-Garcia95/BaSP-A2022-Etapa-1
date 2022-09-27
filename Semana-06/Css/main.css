@@ -311,3 +311,14 @@
     flex-direction: row;
     }
 }
+.border-green{
+    border: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+.border-red{
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+}

@@ -1,57 +1,92 @@
 window.onload = function ()  {
-    var alphaNumberExpression = (/^[A-Za-z0-9]+$/);
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputName = document.getElementById("input-text");
     var inputEmail = document.getElementById("input-email");
-    var inputTextArea = document.getElementById("input-text-area")
-    var inputButton = document.getElementById("input-button")
+    var inputTextArea = document.getElementById("input-text-area");
+    var inputButton = document.getElementById("input-button");
+    var errorTextEmail = document.createElement("p");
+    var falseEmail= "Verify email: ";
+    var falseName= "Verify name: ";
+    var trueEmail= "Email: ";
+    var trueName= "Name: ";
+    var falseText= "Verify text content: ";
+    var trueText = "Text content: ";
+    var textError = document.createElement("p");
+
     
-    
-    //Nombre
-    var errorTextName = document.createElement("p");
-    inputName.onblur = function(){
-        if(!inputName.value == isNaN){
-            inputName.classList.add("border-red");
-            errorTextName.classList.add("parragraph-Email")
-            errorTextName.innerHTML = "Usar nombre valido";
-            inputName.parentNode.insertBefore(errorTextName, inputName.nextSibling)
-            console.log(errorTextName)
-        }else if(inputName.value.length < 3){
-            inputName.classList.add("border-red");
-            errorTextName.classList.add("parragraph-Email")
-            errorTextName.innerHTML = "Usar nombre valido";
-            inputName.parentNode.insertBefore(errorTextName, inputName.nextSibling)
-            alert("necesita mas caracteres");
-        }else{
-            console.log('Nombre valido');
-            inputName.classList.add("border-green")
+    function onlyLetters (inputValue){
+        var inputLower = inputValue.value.toLowerCase();
+        for(var i = 0; i < inputLower.length; i++){
+            if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
+    function onlyNumbers (inputValue){
+        for(var i = 0; i < inputValue.value.length; i++){
+            if ((inputValue.value.charCodeAt(i) >= 48 && inputValue.value.charCodeAt(i) <= 57)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    }
+
+    function onlyNumbersAndLetters (inputValue){
+        var inputLower = inputValue.value.toLowerCase();
+        for(var i = 0; i < inputLower.length; i++){
+            if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122) 
+            ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)){
+                return true;
+            }else{
+                return false;
+            }
         }
     }
     
-    inputName.onfocus = function(){
-        inputName.value = "";
-        inputName.classList.remove("border-red");
-        errorTextName.remove();
+
+    inputName.onblur = function(){
+        if(!onlyLetters(inputName)){
+            inputName.classList.add("border-red");
+                textError.classList.add("parragraph-Email")
+                textError.innerHTML = "Verify parameters";
+                inputName.parentNode.insertBefore(textError, inputName.nextSibling)
+        }else if(inputName.value.length < 3){
+            inputName.classList.add("border-red");
+            textError.classList.add("parragraph-Email")
+            textError.innerHTML = "Faltan caracteres";
+            inputName.parentNode.insertBefore(textError, inputName.nextSibling)
+        }else{
+            inputName.classList.add("border-green");
+        }
     }
+    inputName.onfocus = function(){
+            inputName.value = "";
+            inputName.classList.remove("border-red");
+            textError.remove()
+        }
 
 
-    //Email
-    var errorTextEmail = document.createElement("p");
+
+
     inputEmail.onblur = function(){
         if(!inputEmail.value.match(emailExpression)){
             inputEmail.classList.add("border-red");
             errorTextEmail.classList.add("parragraph-Email")
-            errorTextEmail.innerHTML = "Usar email valido";
+            errorTextEmail.innerHTML = "Verify email";
             inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling)
             console.log(errorTextEmail)
         }else if(inputEmail.value.length < 3){
             inputEmail.classList.add("border-red");
             errorTextEmail.classList.add("parragraph-Email")
-            errorTextEmail.innerHTML = "Usar email valido";
+            errorTextEmail.innerHTML = "Verify email";
             inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling)
             alert("necesita mas caracteres");
         }else{
-            console.log('Email valido');
+            console.log("Valid email");
             inputEmail.classList.add("border-green")
         }
     }
@@ -63,68 +98,59 @@ window.onload = function ()  {
     }
 
 
-    var errorTextArea = document.createElement("p");
     inputTextArea.onblur = function(){
-        if(inputTextArea.value == ""){
+        if(!onlyNumbersAndLetters(inputTextArea)){
             inputTextArea.classList.add("border-red");
-            errorTextArea.classList.add("parragraph-Email")
-            errorTextArea.innerHTML = "Usar email valido";
-            inputTextArea.parentNode.insertBefore(errorTextArea, inputTextArea.nextSibling)
-            console.log(errorTextArea)
+                textError.classList.add("parragraph-Email")
+                textError.innerHTML = "Verify parameters";
+                inputTextArea.parentNode.insertBefore(textError, inputTextArea.nextSibling)
         }else if(inputTextArea.value.length < 3){
             inputTextArea.classList.add("border-red");
-            errorTextArea.classList.add("parragraph-Email")
-            errorTextArea.innerHTML = "Usar email valido";
-            inputTextArea.parentNode.insertBefore(errorTextArea, inputTextArea.nextSibling)
-            alert("necesita mas caracteres");
+            textError.classList.add("parragraph-Email")
+            textError.innerHTML = "Not enough characters";
+            inputTextArea.parentNode.insertBefore(textError, inputTextArea.nextSibling)
         }else{
-            console.log('Email valido');
-            inputTextArea.classList.add("border-green")
+            inputTextArea.classList.add("border-green");
         }
     }
-    
     inputTextArea.onfocus = function(){
-        inputTextArea.value = "";
-        inputTextArea.classList.remove("border-red");
-        errorTextArea.remove();
-    }
+            inputTextArea.value = "";
+            inputTextArea.classList.remove("border-red");
+            textError.remove()
+        }
 
-    var falseEmail= 'Email incorrecto: ';
-    var falsePassword= 'Contrase;a incorrecta: ';
-    var trueEmail= 'Email: ';
-    var truePassword= 'Contrase;a: ';
-    var falseText= "Texto no definido: ";
-    var trueText = "Texto: ";
+
+    
     inputButton.onclick = function(e){
         e.preventDefault();
-        if (inputEmail.classList.contains("border-red") && inputPassword.classList.contains("border-red")&& inputTextArea.classList.contains("border-red")){
+        if (inputEmail.classList.contains("border-red") && inputName.classList.contains("border-red")&& inputTextArea.classList.contains("border-red")){
             falseEmail += inputEmail.value;
-            falsePassword += inputPassword.value;
+            falseName += inputName.value;
             falseText += inputTextArea.value;
-            alert(falseEmail + '/n' + falsePassword + '/n' + falseText);
+            alert(falseEmail + "\n" + falseName + "\n" + falseText);
         }else if(inputEmail.classList.contains("border-red")){
             falseEmail += inputEmail.value;
             alert(falseEmail);
-        }else if(inputPassword.classList.contains("border-red")){
-            falsePassword += inputPassword.value;
-            alert(falsePassword);
+        }else if(inputName.classList.contains("border-red")){
+            falseName += inputName.value;
+            alert(falseName);
         }else if(inputTextArea.classList.contains("border-red")){
             falseText += inputTextArea.value;
             alert(falseText);
         }else{
-            if(inputEmail.value =="" || inputPassword.value =="" || inputTextArea.value ==""){
+            if(inputEmail.value =="" || inputName.value =="" || inputTextArea.value ==""){
                 inputEmail.classList.add("border-red");
-                inputPassword.classList.add("border-red");
+                inputName.classList.add("border-red");
                 inputTextArea.classList.add("border-red")
                 alert("Campo vacio");
             }else{
                 trueEmail += inputEmail.value;
                 console.log(trueEmail);
-                truePassword += inputPassword.value;
-                console.log(truePassword)
+                trueName += inputName.value;
+                console.log(trueName)
                 trueText += inputTextArea.value;
                 console.log(trueText)
-                alert("Success "+ "\n" + trueEmail + "\n" + truePassword + "\n" + trueText)
+                alert("Success "+ "\n" + trueEmail + "\n" + trueName + "\n" + trueText)
             }
         }
     }
