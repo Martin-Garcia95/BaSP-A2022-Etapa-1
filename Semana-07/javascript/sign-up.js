@@ -1,18 +1,34 @@
 window.onload = function ()  {
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputName = document.getElementById("form-input");
-    var inputLastName = document.getElementById("form-input-two");
-    var inputDNI = document.getElementById("form-input-three");
-    var inputBirth = document.getElementById("form-input-four");
-    var inputPhone = document.getElementById("form-input-five");
-    var inputAddress = document.getElementById("form-input-six");
-    var inputCountry = document.getElementById("form-input-seven");
-    var inputPostal = document.getElementById("form-input-eight");
-    var inputEmail = document.getElementById("form-input-nine");
-    var inputPassword = document.getElementById("form-input-ten");
-    var inputSecondPassword = document.getElementById("form-input-eleven");
-    var inputButton = document.getElementById("form-button")
+    var inputName = document.getElementById("form-input-name");
+    var inputLastName = document.getElementById("form-input-lastName");
+    var inputDNI = document.getElementById("form-input-ID");
+    var inputBirth = document.getElementById("form-input-birth");
+    var inputPhone = document.getElementById("form-input-phone");
+    var inputAddress = document.getElementById("form-input-direction");
+    var inputCountry = document.getElementById("form-input-localization");
+    var inputPostal = document.getElementById("form-input-postal-code");
+    var inputEmail = document.getElementById("form-input-mail");
+    var inputPassword = document.getElementById("form-input-password");
+    var inputSecondPassword = document.getElementById("form-input-rpassword");
+    var inputButton = document.getElementById("form-button");
     var textError = document.createElement("p");
+    var year = inputBirth.value.substring(0, inputBirth.value.indexOf("-"));
+    var month = inputBirth.value.substring(inputBirth.value.indexOf("-")+1, inputBirth.value.indexOf("-")+3);
+    var day = inputBirth.value.substring(inputBirth.value.indexOf("-")+4);
+    var dateArray = [month, day, year];
+    var dateString = dateArray.join("/");
+    localStorage.getItem("Name", inputName.value);
+    localStorage.getItem("Last name", inputLastName.value);
+    localStorage.getItem("ID", inputDNI.value);
+    localStorage.getItem("Birth", dateString);
+    localStorage.getItem("Phone", inputPhone.value);
+    localStorage.getItem("Addres", inputAddress.value);
+    localStorage.getItem("Country/city", inputCountry.value);
+    localStorage.getItem("Postal code", inputPostal.value);
+    localStorage.getItem("Email", inputEmail.value);
+    localStorage.getItem("Password", inputPassword.value);
+    
     
     function onlyLetters (inputValue){
         var inputLower = inputValue.value.toLowerCase();
@@ -39,7 +55,7 @@ window.onload = function ()  {
         var inputLower = inputValue.value.toLowerCase();
         for(var i = 0; i < inputLower.length; i++){
             if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122) 
-            ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)){
+           ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)){
                 return true;
             }else{
                 return false;
@@ -335,6 +351,34 @@ window.onload = function ()  {
             + "City/Country :" + inputCountry.value +"\n" + "Postal code" + inputPostal.value + "\n"
             + "Email :" + inputEmail.value +"\n" + "Password: " + inputPassword.value +"\n"
             + "Password confirmation: " + inputSecondPassword.value)
+
+            var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + inputName.value + 
+            "&lastName=" + inputLastName.value + "&dni=" + inputDNI.value + "&dob=" + dateString + 
+            "&phone=" + inputPhone.value + "&address=" + inputAddress.value + "&city=" + inputCountry.value + 
+            "&zip=" + inputPostal.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value;
+            var promise = fetch(url);
+                promise.then(function(resp){
+                    return resp.json();
+                })
+                .then(function(data){
+                    console.log(data.msg)
+                })
+                .then(function(storage){
+                    localStorage.setItem("Name", inputName.value);
+                    localStorage.setItem("Last name", inputLastName.value);
+                    localStorage.setItem("ID", inputDNI.value);
+                    localStorage.setItem("Birth", dateString);
+                    localStorage.setItem("Phone", inputPhone.value);
+                    localStorage.setItem("Addres", inputAddress.value);
+                    localStorage.setItem("Country/city", inputCountry.value);
+                    localStorage.setItem("Postal code", inputPostal.value);
+                    localStorage.setItem("Email", inputEmail.value);
+                    localStorage.setItem("Password", inputPassword.value);
+                })
+                .catch(function(error){
+                    throw new Error(error)
+                    alert(error.mgs)
+                })
         }
     }
 }

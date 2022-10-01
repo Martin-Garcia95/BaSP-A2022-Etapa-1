@@ -1,39 +1,14 @@
 window.onload = function ()  {
+    var inputEmail = document.getElementById("form-input-user");
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputName = document.getElementById("form-input");
-    var inputLastName = document.getElementById("form-input-two");
-    var inputDNI = document.getElementById("form-input-three");
-    var inputBirth = document.getElementById("form-input-four");
-    var inputPhone = document.getElementById("form-input-five");
-    var inputAddress = document.getElementById("form-input-six");
-    var inputCountry = document.getElementById("form-input-seven");
-    var inputPostal = document.getElementById("form-input-eight");
-    var inputEmail = document.getElementById("form-input-nine");
-    var inputPassword = document.getElementById("form-input-ten");
-    var inputSecondPassword = document.getElementById("form-input-eleven");
-    var inputButton = document.getElementById("form-button")
+    var inputPassword = document.getElementById("form-input-password");
+    var inputButton = document.getElementById("form-button");
+    var falseEmail= "Verify email: ";
+    var falsePassword= "Verify password: ";
+    var trueEmail= "Email: ";
+    var truePassword= "Password: ";
+    var errorTextEmail = document.createElement("p");
     var textError = document.createElement("p");
-    
-    function onlyLetters (inputValue){
-        var inputLower = inputValue.value.toLowerCase();
-        for(var i = 0; i < inputLower.length; i++){
-            if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    }
-
-    function onlyNumbers (inputValue){
-        for(var i = 0; i < inputValue.value.length; i++){
-            if ((inputValue.value.charCodeAt(i) >= 48 && inputValue.value.charCodeAt(i) <= 57)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    }
 
     function onlyNumbersAndLetters (inputValue){
         var inputLower = inputValue.value.toLowerCase();
@@ -46,199 +21,8 @@ window.onload = function ()  {
             }
         }
     }
-    
-    function onlyNumbersAndLettersAddress (inputValue){
-        var inputLower = inputValue.value.toLowerCase();
-        for(var i = 0; i < inputLower.length; i++){
-            if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122) 
-            ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)
-            || (inputLower.charCodeAt(i) = 32)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    }
 
 
-    inputName.onblur = function(){
-        if(!onlyLetters(inputName)){
-            inputName.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify name";
-                inputName.parentNode.insertBefore(textError, inputName.nextSibling)
-        }else if(inputName.value.length < 3){
-            inputName.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputName.parentNode.insertBefore(textError, inputName.nextSibling)
-        }else{
-            inputName.classList.add("border-green");
-        }
-    }
-    inputName.onfocus = function(){
-            inputName.value = "";
-            inputName.classList.remove("border-red");
-            textError.remove()
-        }
-
-
-    inputLastName.onblur = function(){
-        if(!onlyLetters(inputLastName)){
-            inputLastName.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify last name";
-                inputLastName.parentNode.insertBefore(textError, inputLastName.nextSibling)
-        }else if(inputLastName.value.length < 3){
-            inputLastName.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputLastName.parentNode.insertBefore(textError, inputLastName.nextSibling)
-        }else{
-            inputLastName.classList.add("border-green");
-        }
-    }
-    inputLastName.onfocus = function(){
-            inputLastName.value = "";
-            inputLastName.classList.remove("border-red");
-            textError.remove()
-        }
-    
-
-    inputDNI.onblur = function(){
-        if(!onlyNumbers(inputDNI)){
-            inputDNI.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify ID";
-                inputDNI.parentNode.insertBefore(textError, inputDNI.nextSibling)
-        }else if(inputDNI.value.length < 7){
-            inputDNI.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputDNI.parentNode.insertBefore(textError, inputDNI.nextSibling)
-        }else{
-            inputDNI.classList.add("border-green");
-        }
-    }
-    inputDNI.onfocus = function(){
-            inputDNI.value = "";
-            inputDNI.classList.remove("border-red");
-            textError.remove()
-        }
-    
-
-    inputBirth.onblur = function(){
-        if(inputBirth.value == ""){
-            inputBirth.classList.add("border-red");
-            errorTextBirth.classList.add("parragraph-Email")
-            errorTextBirth.innerHTML = "Verify date";
-            inputBirth.parentNode.insertBefore(errorTextBirth, inputBirth.nextSibling)
-            console.log(errorTextBirth)
-
-        }else{
-            console.log('Fecha de nacimieto valido');
-            inputBirth.classList.add("border-green")
-        }
-    }
-    
-    inputBirth.onfocus = function(){
-        inputBirth.value = "";
-        inputBirth.classList.remove("border-red");
-        errorTextBirth.remove();
-    }
-
-
-    inputPhone.onblur = function(){
-        if(!onlyNumbers(inputPhone)){
-            inputPhone.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify phone number";
-                inputPhone.parentNode.insertBefore(textError, inputPhone.nextSibling)
-        }else if(inputPhone.value.length < 10){
-            inputPhone.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputPhone.parentNode.insertBefore(textError, inputPhone.nextSibling)
-        }else{
-            inputPhone.classList.add("border-green");
-        }
-    }
-    inputPhone.onfocus = function(){
-            inputPhone.value = "";
-            inputPhone.classList.remove("border-red");
-            textError.remove()
-        }
-
-
-    inputAddress.onblur = function(){
-        if(!onlyNumbersAndLettersAddress(inputAddress)){
-            inputAddress.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify Address log";
-                inputAddress.parentNode.insertBefore(textError, inputAddress.nextSibling)
-        }else if(inputAddress.value.length < 3){
-            inputAddress.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputAddress.parentNode.insertBefore(textError, inputAddress.nextSibling)
-        }else if (!inputAddress.value.includes(" ")){
-            alert("Space character not included")
-        }else{
-            inputAddress.classList.add("border-green");
-        }
-    }
-    inputAddress.onfocus = function(){
-            inputAddress.value = "";
-            inputAddress.classList.remove("border-red");
-            textError.remove()
-        }
-
-
-    inputCountry.onblur = function(){
-        if(!onlyNumbersAndLetters(inputCountry)){
-            inputCountry.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify country log";
-                inputCountry.parentNode.insertBefore(textError, inputCountry.nextSibling)
-        }else if(inputCountry.value.length < 3){
-            inputCountry.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputCountry.parentNode.insertBefore(textError, inputCountry.nextSibling)
-        }else{
-            inputCountry.classList.add("border-green");
-        }
-    }
-    inputCountry.onfocus = function(){
-            inputCountry.value = "";
-            inputCountry.classList.remove("border-red");
-            textError.remove()
-        }
-
-
-    inputPostal.onblur = function(){
-        if(!onlyNumbers(inputPostal)){
-            inputPostal.classList.add("border-red");
-                textError.classList.add("parragraph-Email")
-                textError.innerHTML = "Verify postal number";
-                inputPostal.parentNode.insertBefore(textError, inputPostal.nextSibling)
-        }else if(inputPostal.value.length <= 4 && inputPostal.value.length >= 5){
-            inputPostal.classList.add("border-red");
-            textError.classList.add("parragraph-Email")
-            textError.innerHTML = "Not enough characters";
-            inputPostal.parentNode.insertBefore(textError, inputPostal.nextSibling)
-        }else{
-            inputPostal.classList.add("border-green");
-        }
-    }
-    inputPostal.onfocus = function(){
-            inputPostal.value = "";
-            inputPostal.classList.remove("border-red");
-            textError.remove()
-        }
-
-
-    var errorTextEmail = document.createElement("p");
     inputEmail.onblur = function(){
         if(!inputEmail.value.match(emailExpression)){
             inputEmail.classList.add("border-red");
@@ -251,9 +35,9 @@ window.onload = function ()  {
             errorTextEmail.classList.add("parragraph-Email")
             errorTextEmail.innerHTML = "Not enough characters";
             inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling)
-            alert("Not enough characters");
+            alert("necesita mas caracteres");
         }else{
-            console.log('Email valido');
+            console.log("Valid email");
             inputEmail.classList.add("border-green")
         }
     }
@@ -286,55 +70,50 @@ window.onload = function ()  {
             textError.remove()
         }
 
-
-    var errorTextPaswordConfirm = document.createElement("p");
-    inputSecondPassword.onblur = function(){
-        if(!inputSecondPassword.value === inputPassword){
-            inputSecondPassword.classList.add("border-red");
-            errorTextPaswordConfirm.classList.add("parragraph-Email")
-            errorTextPaswordConfirm.innerHTML = "Use same password";
-            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling)
-            console.log(errorTextPaswordConfirm)
-        }else if(inputSecondPassword.value.length === ""){
-            inputSecondPassword.classList.add("border-red");
-            errorTextPaswordConfirm.classList.add("parragraph-Email")
-            errorTextPaswordConfirm.innerHTML = "Use same password";
-            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling)
-        }else{
-            console.log('Contrase;as iguales');
-            inputSecondPassword.classList.add("border-green")
-        }
-    }
     
-    inputSecondPassword.onfocus = function(){
-        inputSecondPassword.value = "";
-        inputSecondPassword.classList.remove("border-red");
-        errorTextPaswordConfirm.remove();
-    }
-
-
     inputButton.onclick = function(e){
-        e.preventDefault()
-        if(inputName.classList.contains("border-red") ||inputLastName.classList.contains("border-red")
-        ||inputDNI.classList.contains("border-red")||inputBirth.classList.contains("border-red")
-        ||inputAddress.classList.contains("border-red")||inputCountry.classList.contains("border-red")
-        ||inputPhone.classList.contains("border-red")||inputPostal.classList.contains("border-red")
-        ||inputPassword.classList.contains("border-red")||inputSecondPassword.classList.contains("border-red")
-        ||inputEmail.classList.contains("border-red")){
-            alert("Invalid data")
-        }else if(inputName.value ==="" || inputLastName.value ==="" || inputDNI.value ==="" 
-        || inputBirth.value ==="" || inputAddress.value ==="" || inputCountry.value ==="" 
-        || inputPhone.value ==="" || inputPostal.value ==="" || inputPassword.value ==="" 
-        || inputEmail.value ==="" || inputSecondPassword.value ===""){
-            alert("Fill requierd fields")
-        }
-        else{
-            alert("Name :" + inputName.value +"\n" + "Last name: " + inputLastName.value+"\n" 
-            + "ID :" + inputDNI.value +"\n" + "Birth date :" + inputBirth.value +"\n" 
-            + "Phone number :" + inputPhone.value +"\n" + "Address :" + inputAddress.value + "\n"
-            + "City/Country :" + inputCountry.value +"\n" + "Postal code" + inputPostal.value + "\n"
-            + "Email :" + inputEmail.value +"\n" + "Password: " + inputPassword.value +"\n"
-            + "Password confirmation: " + inputSecondPassword.value)
+        e.preventDefault();
+        if (inputEmail.classList.contains("border-red") && inputPassword.classList.contains("border-red")){
+            falseEmail += inputEmail.value;
+            falsePassword += inputPassword.value;
+            alert(falseEmail + "/n" + falsePassword);
+        }else if(inputEmail.classList.contains("border-red")){
+            falseEmail += inputEmail.value;
+            alert(falseEmail);
+        }else if(inputPassword.classList.contains("border-red")){
+            falsePassword += inputPassword.value;
+            alert(falsePassword);
+        }else{
+            if(inputEmail.value =="" || inputPassword.value ==""){
+                inputEmail.classList.add("border-red");
+                inputPassword.classList.add("border-red");
+                alert("Campo vacio");
+            }else{
+                trueEmail += inputEmail.value;
+                console.log(trueEmail);
+                truePassword += inputPassword.value;
+                console.log(truePassword);
+                var url = "https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputEmail.value + 
+                "&password=" + inputPassword.value;
+                var promise = fetch(url);
+                promise.then(function(response){
+                    console.log(response);
+                if(response.status >= 400){
+                    throw new Error(response);
+                    }else{
+                        return response.json();
+                    }
+                })
+                .then(function(data){
+                    alert(data.msg);
+                })
+                .catch(function(error){
+                    alert(error + "\n" + "Check Email or Password")
+                })
+                alert ("Success "+ "\n" + trueEmail + "\n" + truePassword)
+                trueEmail= "Email: "
+                truePassword="Password: "
+            };
         }
     }
-}
+    }

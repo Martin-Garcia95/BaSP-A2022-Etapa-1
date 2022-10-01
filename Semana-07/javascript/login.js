@@ -1,7 +1,7 @@
 window.onload = function ()  {
-    var inputEmail = document.getElementById("form-input");
+    var inputEmail = document.getElementById("form-input-user");
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var inputPassword = document.getElementById("form-input-two");
+    var inputPassword = document.getElementById("form-input-password");
     var inputButton = document.getElementById("form-button");
     var falseEmail= "Verify email: ";
     var falsePassword= "Verify password: ";
@@ -9,27 +9,6 @@ window.onload = function ()  {
     var truePassword= "Password: ";
     var errorTextEmail = document.createElement("p");
     var textError = document.createElement("p");
-
-    function onlyLetters (inputValue){
-        var inputLower = inputValue.value.toLowerCase();
-        for(var i = 0; i < inputLower.length; i++){
-            if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    }
-
-    function onlyNumbers (inputValue){
-        for(var i = 0; i < inputValue.value.length; i++){
-            if ((inputValue.value.charCodeAt(i) >= 48 && inputValue.value.charCodeAt(i) <= 57)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    }
 
     function onlyNumbersAndLetters (inputValue){
         var inputLower = inputValue.value.toLowerCase();
@@ -113,9 +92,28 @@ window.onload = function ()  {
                 trueEmail += inputEmail.value;
                 console.log(trueEmail);
                 truePassword += inputPassword.value;
-                console.log(truePassword)
-                alert("Success "+ "\n" + trueEmail + "\n" + truePassword)
-            }
+                console.log(truePassword);
+                var url = "https://basp-m2022-api-rest-server.herokuapp.com/login?email=" + inputEmail.value + 
+                "&password=" + inputPassword.value;
+                var promise = fetch(url);
+                promise.then(function(response){
+                    console.log(response);
+                if(response.status >= 400){
+                    throw new Error(response);
+                    }else{
+                        return response.json();
+                    }
+                })
+                .then(function(data){
+                    alert(data.msg);
+                })
+                .catch(function(error){
+                    alert(error + "\n" + "Check Email or Password")
+                })
+                alert ("Success "+ "\n" + trueEmail + "\n" + truePassword)
+                trueEmail= "Email: "
+                truePassword="Password: "
+            };
         }
     }
     }
