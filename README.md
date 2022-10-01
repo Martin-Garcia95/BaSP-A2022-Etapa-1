@@ -63,3 +63,9 @@
         Today i worked with my coworkers during a meet to learn more about js
     27-09-22
         Today i can complete the project with all the details
+
+### Week 07
+    In this week we are gonna work with promises
+
+    30-09-22
+        Today i created the "week 07" folder
