@@ -1,0 +1,324 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(198, 226, 230, 0.6399) 1.57%, rgba(88, 151, 159, 0.2212) 19.27%,
+    rgba(71, 147, 129, 0.1343) 35.94%, rgba(165, 207, 187, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.home h2{
+    margin-top: 30%;
+    margin-bottom: 15%;
+    box-sizing: border-box;
+    background: rgba(170, 206, 155, 0.53);
+    border: 2px solid #00000070;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 3.8rem;
+    background-color: #E6F1E1;
+}
+.home p{
+    margin: 7%;
+    font-size: 2rem;
+}
+.trackgenix-home{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.feactures img{
+    width: 112px;
+    height: 107px;
+    border: 1px;
+    border-style: solid;
+    background-color: #E6F1E1;
+}
+.feactures h2{
+    text-align: center;
+    font-size: 1.7rem;
+}
+.feactures h3{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.hour-report{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 10%;
+}
+.resource-roles{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10%;
+}
+.wysut{
+    padding: 5%;
+}
+.wysut h2{
+    text-align: center;
+    margin: 5%;
+    font-size: 1.7rem;
+}
+.wysut h3{
+    font-size: 1.8rem;
+}
+.wysut p{
+    font-size: 1.2rem;
+    width: 200px;
+}
+.wysut article{
+    width: 50%;
+}
+.wysut img{
+    width: 77px;
+    height: 78px;
+}
+.wysut-article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.productivity-booster{
+    display: flex;
+    align-items: center;
+}
+.booster{
+    text-align: center;
+}
+.work-traceaebility{
+    display: flex;
+    align-items: center;
+}
+.traceability{
+    text-align: center;
+}
+.leadership{
+    display: flex;
+    align-items: center;
+}
+.team-management{
+    text-align: center;
+}
+.decision-making{
+    display: flex;
+    align-items: center;
+}
+.making{
+    text-align: center;
+}
+.inscription h2{
+    padding: 3%;
+    font-size: 2.4rem;
+}
+.inscription form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-text{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-email{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-contact{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-text-area{
+    width: 70%;
+    margin: 3%;
+    padding: 3%;
+}
+.input-button{
+    margin-left: 30%;
+    padding: 2%;
+}
+.companys-mission{
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.companys-mission h2{
+    padding: 1%;
+    margin: 2%;
+    font-size: 2.2rem;
+}
+.company-head{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.company-head h3{
+    width: 60%;
+    margin: 3%;
+    font-size: 2.3rem;
+}
+.article-company{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+    line-height: 2;
+}
+.article-company h3{
+    font-size: 1.6rem;
+}
+.article-company p{
+    font-size: 1.2rem;
+}
+.quote{
+    text-align: center;
+}
+.quote h3{
+    font-size: 2rem;
+}
+.quote q{
+    font-size: 1.6rem;
+}
+.quote cite{
+    font-size: 1.5rem;
+}
+.about-us{
+    padding: 4%;
+}
+.about-us h3{
+    font-size: 1.8rem;
+}
+.about-us p{
+    width: 450px;
+    font-size: 1.5rem;
+}
+.about-us-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+.products h2{
+    padding: 2%;
+    font-size: 2.6rem;
+}
+.products h3{
+    font-size: 1.8rem;
+}
+.products p{
+    font-size: 1.1rem;
+}
+.products img{
+    width: 333px;
+    height: 246px;
+}
+.our-products-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8;
+}
+.customized-work p{
+    width: 340px;
+}
+.company h2{
+    padding: 2%;
+    font-size: 2.6rem;
+}
+.company h3{
+    font-size: 1.6rem;
+}
+.company p{
+    font-size: 1.3rem;
+}
+.company-first{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+.company-second{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    align-items: flex-end;
+    text-align: end;
+}
+.company-third{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 3%;
+}
+.support h2{
+    padding: 2%;
+    font-size: 2.6rem;
+}
+.assitence{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.6rem;
+}
+.tutorials{
+    padding: 6%;
+}
+.tutorials h3{
+    padding: 2%;
+    font-size: 2.8rem;
+}
+.tutorials ul{
+    line-height: 1.7;
+}
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+}
+@media (min-width: 768px){
+    #main{
+        top: 147px;
+        margin-left: min(30%, 320px);
+        width: max(70%, (100% - 320px) );
+        }
+    }
+@media (min-width: 768px){
+    .wysut-article{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+@media (min-width: 1200px){
+    .wysut-article{
+        display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+}
+.border-green{
+    border: 2px;
+    border-style: solid;
+    border-color: green;
+}
+
+.border-red{
+    border: 2px;
+    border-style: solid;
+    border-color: red;
+}
