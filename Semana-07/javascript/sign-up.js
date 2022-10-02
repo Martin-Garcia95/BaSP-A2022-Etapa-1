@@ -13,23 +13,26 @@ window.onload = function ()  {
     var inputSecondPassword = document.getElementById("form-input-rpassword");
     var inputButton = document.getElementById("form-button");
     var textError = document.createElement("p");
-    var year = inputBirth.value.substring(0, inputBirth.value.indexOf("-"));
-    var month = inputBirth.value.substring(inputBirth.value.indexOf("-")+1, inputBirth.value.indexOf("-")+3);
-    var day = inputBirth.value.substring(inputBirth.value.indexOf("-")+4);
-    var dateArray = [month, day, year];
-    var dateString = dateArray.join("/");
-    localStorage.getItem("Name", inputName.value);
-    localStorage.getItem("Last name", inputLastName.value);
-    localStorage.getItem("ID", inputDNI.value);
-    localStorage.getItem("Birth", dateString);
-    localStorage.getItem("Phone", inputPhone.value);
-    localStorage.getItem("Addres", inputAddress.value);
-    localStorage.getItem("Country/city", inputCountry.value);
-    localStorage.getItem("Postal code", inputPostal.value);
-    localStorage.getItem("Email", inputEmail.value);
-    localStorage.getItem("Password", inputPassword.value);
-    
-    
+    function test(){
+        var prueba = localStorage.getItem("Birth");
+        var year = prueba.substring(0, prueba.indexOf("/"));
+        var month = prueba.substring(prueba.indexOf("/")+1, prueba.indexOf("/")+3);
+        var day = prueba.substring(prueba.indexOf("/")+4, prueba.indexOf("/") + prueba.length);
+        var dateArray = [day, year, month];
+        var dateStringTest = dateArray.join("-");
+        return dateStringTest;
+    }
+    localStorage.setItem("Birth", test());
+    inputName.value = localStorage.getItem("Name");
+    inputLastName.value = localStorage.getItem("Last name");
+    inputDNI.value = localStorage.getItem("ID");
+    inputBirth.value = localStorage.getItem("Birth");
+    inputPhone.value = localStorage.getItem("Phone");
+    inputAddress.value = localStorage.getItem("Addres");
+    inputCountry.value = localStorage.getItem("Country/city");
+    inputPostal.value = localStorage.getItem("Postal code");
+    inputEmail.value = localStorage.getItem("Email");
+    inputPassword.value = localStorage.getItem("Password");
     function onlyLetters (inputValue){
         var inputLower = inputValue.value.toLowerCase();
         for(var i = 0; i < inputLower.length; i++){
@@ -40,7 +43,6 @@ window.onload = function ()  {
             }
         }
     }
-
     function onlyNumbers (inputValue){
         for(var i = 0; i < inputValue.value.length; i++){
             if ((inputValue.value.charCodeAt(i) >= 48 && inputValue.value.charCodeAt(i) <= 57)){
@@ -50,19 +52,17 @@ window.onload = function ()  {
             }
         }
     }
-
     function onlyNumbersAndLetters (inputValue){
         var inputLower = inputValue.value.toLowerCase();
         for(var i = 0; i < inputLower.length; i++){
             if ((inputLower.charCodeAt(i) >= 97 && inputLower.charCodeAt(i) <= 122) 
-           ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)){
+        ||(inputLower.charCodeAt(i) >= 48 && inputLower.charCodeAt(i) <= 57)){
                 return true;
             }else{
                 return false;
             }
         }
     }
-    
     function onlyNumbersAndLettersAddress (inputValue){
         var inputLower = inputValue.value.toLowerCase();
         for(var i = 0; i < inputLower.length; i++){
@@ -132,6 +132,11 @@ window.onload = function ()  {
             textError.classList.add("parragraph-Email")
             textError.innerHTML = "Not enough characters";
             inputDNI.parentNode.insertBefore(textError, inputDNI.nextSibling)
+        }else if(inputDNI.value.length > 8){
+            inputDNI.classList.add("border-red");
+            textError.classList.add("parragraph-Email")
+            textError.innerHTML = "Check ID number length";
+            inputDNI.parentNode.insertBefore(textError, inputDNI.nextSibling)
         }else{
             inputDNI.classList.add("border-green");
         }
@@ -146,21 +151,18 @@ window.onload = function ()  {
     inputBirth.onblur = function(){
         if(inputBirth.value == ""){
             inputBirth.classList.add("border-red");
-            errorTextBirth.classList.add("parragraph-Email")
-            errorTextBirth.innerHTML = "Verify date";
-            inputBirth.parentNode.insertBefore(errorTextBirth, inputBirth.nextSibling)
-            console.log(errorTextBirth)
-
+            textError.classList.add("parragraph-Email");
+            textError.innerHTML = "Verify date";
+            inputBirth.parentNode.insertBefore(textError, inputBirth.nextSibling);
         }else{
-            console.log('Fecha de nacimieto valido');
-            inputBirth.classList.add("border-green")
+            inputBirth.classList.add("border-green");
         }
     }
     
     inputBirth.onfocus = function(){
         inputBirth.value = "";
         inputBirth.classList.remove("border-red");
-        errorTextBirth.remove();
+        textError.remove();
     }
 
 
@@ -260,16 +262,14 @@ window.onload = function ()  {
             inputEmail.classList.add("border-red");
             errorTextEmail.classList.add("parragraph-Email")
             errorTextEmail.innerHTML = "Verify email";
-            inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling)
-            console.log(errorTextEmail)
+            inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling);
         }else if(inputEmail.value.length < 3){
             inputEmail.classList.add("border-red");
-            errorTextEmail.classList.add("parragraph-Email")
+            errorTextEmail.classList.add("parragraph-Email");
             errorTextEmail.innerHTML = "Not enough characters";
-            inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling)
+            inputEmail.parentNode.insertBefore(errorTextEmail, inputEmail.nextSibling);
             alert("Not enough characters");
         }else{
-            console.log('Email valido');
             inputEmail.classList.add("border-green")
         }
     }
@@ -309,16 +309,14 @@ window.onload = function ()  {
             inputSecondPassword.classList.add("border-red");
             errorTextPaswordConfirm.classList.add("parragraph-Email")
             errorTextPaswordConfirm.innerHTML = "Use same password";
-            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling)
-            console.log(errorTextPaswordConfirm)
+            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling);
         }else if(inputSecondPassword.value.length === ""){
             inputSecondPassword.classList.add("border-red");
-            errorTextPaswordConfirm.classList.add("parragraph-Email")
+            errorTextPaswordConfirm.classList.add("parragraph-Email");
             errorTextPaswordConfirm.innerHTML = "Use same password";
-            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling)
+            inputSecondPassword.parentNode.insertBefore(errorTextPaswordConfirm, inputSecondPassword.nextSibling);
         }else{
-            console.log('Contrase;as iguales');
-            inputSecondPassword.classList.add("border-green")
+            inputSecondPassword.classList.add("border-green");
         }
     }
     
@@ -331,6 +329,15 @@ window.onload = function ()  {
 
     inputButton.onclick = function(e){
         e.preventDefault()
+        var year = inputBirth.value.substring(0, inputBirth.value.indexOf("-"));
+        var month = inputBirth.value.substring(inputBirth.value.indexOf("-")+1, inputBirth.value.indexOf("-")+3);
+        var day = inputBirth.value.substring(inputBirth.value.indexOf("-")+4, inputBirth.value.length);
+        var dateArray = [month, day, year];
+        var dateString = dateArray.join("/");
+        console.log(dateString);
+        console.log(year);
+        console.log(day);
+        console.log(month);
         if(inputName.classList.contains("border-red") ||inputLastName.classList.contains("border-red")
         ||inputDNI.classList.contains("border-red")||inputBirth.classList.contains("border-red")
         ||inputAddress.classList.contains("border-red")||inputCountry.classList.contains("border-red")
@@ -345,40 +352,36 @@ window.onload = function ()  {
             alert("Fill requierd fields")
         }
         else{
-            alert("Name :" + inputName.value +"\n" + "Last name: " + inputLastName.value+"\n" 
-            + "ID :" + inputDNI.value +"\n" + "Birth date :" + inputBirth.value +"\n" 
-            + "Phone number :" + inputPhone.value +"\n" + "Address :" + inputAddress.value + "\n"
-            + "City/Country :" + inputCountry.value +"\n" + "Postal code" + inputPostal.value + "\n"
-            + "Email :" + inputEmail.value +"\n" + "Password: " + inputPassword.value +"\n"
-            + "Password confirmation: " + inputSecondPassword.value)
-
             var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name=" + inputName.value + 
             "&lastName=" + inputLastName.value + "&dni=" + inputDNI.value + "&dob=" + dateString + 
             "&phone=" + inputPhone.value + "&address=" + inputAddress.value + "&city=" + inputCountry.value + 
             "&zip=" + inputPostal.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value;
-            var promise = fetch(url);
-                promise.then(function(resp){
-                    return resp.json();
-                })
-                .then(function(data){
-                    console.log(data.msg)
-                })
-                .then(function(storage){
-                    localStorage.setItem("Name", inputName.value);
-                    localStorage.setItem("Last name", inputLastName.value);
-                    localStorage.setItem("ID", inputDNI.value);
-                    localStorage.setItem("Birth", dateString);
-                    localStorage.setItem("Phone", inputPhone.value);
-                    localStorage.setItem("Addres", inputAddress.value);
-                    localStorage.setItem("Country/city", inputCountry.value);
-                    localStorage.setItem("Postal code", inputPostal.value);
-                    localStorage.setItem("Email", inputEmail.value);
-                    localStorage.setItem("Password", inputPassword.value);
-                })
-                .catch(function(error){
-                    throw new Error(error)
-                    alert(error.mgs)
-                })
+            fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                alert(data.mgs + "\n" + "Name :" + inputName.value +"\n"
+                + "Last name: " + inputLastName.value+"\n" 
+            + "ID :" + inputDNI.value +"\n" + "Birth date :" + inputBirth.value +"\n" 
+            + "Phone number :" + inputPhone.value +"\n" + "Address :" + inputAddress.value + "\n"
+            + "City/Country :" + inputCountry.value +"\n" + "Postal code" + inputPostal.value + "\n"
+            + "Email :" + inputEmail.value +"\n" + "Password: " + inputPassword.value +"\n"
+            + "Password confirmation: " + inputSecondPassword.value);
+                localStorage.setItem("Name", inputName.value);
+                localStorage.setItem("Last name", inputLastName.value);
+                localStorage.setItem("ID", inputDNI.value);
+                localStorage.setItem("Birth", dateString);
+                localStorage.setItem("Phone", inputPhone.value);
+                localStorage.setItem("Addres", inputAddress.value);
+                localStorage.setItem("Country/city", inputCountry.value);
+                localStorage.setItem("Postal code", inputPostal.value);
+                localStorage.setItem("Email", inputEmail.value);
+                localStorage.setItem("Password", inputPassword.value)
+            })
+            .catch(function(error){
+                alert(error)
+            })
         }
     }
 }
