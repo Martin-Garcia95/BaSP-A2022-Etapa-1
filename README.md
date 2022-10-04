@@ -69,3 +69,11 @@
 
     30-09-22
         Today i created the "week 07" folder
+    01-10-22
+        Today i started working on the weekly project using js
+    02-10-22
+        Today i worked with my teammates trying to resolve some problmes with the API
+    03-10-22
+        Today i try to make a modal button using css
+    04-10-22
+        I complete the project for now

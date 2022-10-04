@@ -3,8 +3,8 @@ window.onload = function ()  {
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputPassword = document.getElementById("form-input-password");
     var inputButton = document.getElementById("form-button");
-    var invalidFieldsEmail = document.getElementById("invalid-fields-email");
-    var span = document.getElementsByClassName("close");
+    var modalAlert = document.getElementById("invalid-fields-email");
+    var span = document.getElementById("close");
     var errorTextEmail = document.createElement("p");
     var textError = document.createElement("p");
 
@@ -59,48 +59,48 @@ window.onload = function ()  {
     inputButton.onclick = function(e){
         e.preventDefault();
         if(inputEmail.classList.contains("border-red") && inputPassword.classList.contains("border-red")){
-            invalidFieldsEmail.style.display = "block";
-            document.getElementById("span-alert").innerHTML="Invalid fields"
+            modalAlert.style.display = "block";
+            document.getElementById("span-alert").innerText="Invalid fields"
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
         }
         window.onclick = function(event) {
-            if (event.target == invalidFieldsEmail) {
-            invalidFieldsEmail.style.display = "none";
+            if (event.target == modalAlert) {
+            modalAlert.style.display = "none";
             }
         }
         }else if(inputEmail.classList.contains("border-red")){
-            invalidFieldsEmail.style.display = "block";
-            document.getElementById("span-alert").innerHTML="Invalid email"
+            modalAlert.style.display = "block";
+            document.getElementById("span-alert").innerText="Invalid email"
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
         }
         window.onclick = function(event) {
-            if (event.target == invalidFieldsEmail) {
-            invalidFieldsEmail.style.display = "none";
+            if (event.target == modalAlert) {
+            modalAlert.style.display = "none";
             }
         }
         }else if(inputPassword.classList.contains("border-red")){
-            invalidFieldsEmail.style.display = "block";
-            document.getElementById("span-alert").innerHTML="Invalid password"
+            modalAlert.style.display = "block";
+            document.getElementById("span-alert").innerText="Invalid password"
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
         }
         window.onclick = function(event) {
-            if (event.target == invalidFieldsEmail) {
-            invalidFieldsEmail.style.display = "none";
+            if (event.target == modalAlert) {
+            modalAlert.style.display = "none";
             }
         }
         }else if(inputEmail.value =="" || inputPassword.value ==""){
                 inputEmail.classList.add("border-red");
-                invalidFieldsEmail.style.display = "block";
-            document.getElementById("span-alert").innerHTML="Empty fields"
+                modalAlert.style.display = "block";
+            document.getElementById("span-alert").innerText="Empty fields"
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
             }
             window.onclick = function(event) {
-            if (event.target == invalidFieldsEmail) {
-            invalidFieldsEmail.style.display = "none";
+            if (event.target == modalAlert) {
+            modalAlert.style.display = "none";
             }
             }
         }else{
@@ -115,19 +115,28 @@ window.onload = function ()  {
                     }
                 })
                 .then(function(data){
-                    invalidFieldsEmail.style.display = "block";
-                    document.getElementById("span-alert").innerHTML=(data.msg)
+                    modalAlert.style.display = "block";
+                    document.getElementById("span-alert").innerText=(data.msg)
                     span.onclick = function() {
-                        invalidFieldsEmail.style.display = "none";
+                        modalAlert.style.display = "none";
                     }
                     window.onclick = function(event) {
-                        if (event.target == invalidFieldsEmail) {
-                            invalidFieldsEmail.style.display = "none";
+                        if (event.target == modalAlert) {
+                            modalAlert.style.display = "none";
                         }
                     }
                 })
                 .catch(function(error){
-                    alert(error + "\n" + "Check Email or Password");
+                    modalAlert.style.display = "block";
+                    document.getElementById("span-alert").innerText=(error + "\n" + "Check email or password")
+                    span.onclick = function() {
+                        modalAlert.style.display = "none";
+                    }
+                    window.onclick = function(event) {
+                        if (event.target == modalAlert) {
+                            modalAlert.style.display = "none";
+                        }
+                    }
                 })
             };
         }

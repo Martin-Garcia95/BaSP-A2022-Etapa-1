@@ -13,8 +13,8 @@ window.onload = function ()  {
     var inputSecondPassword = document.getElementById("form-input-rpassword");
     var inputButton = document.getElementById("form-button");
     var textError = document.createElement("p");
-    var invalidFieldsEmail = document.getElementById("invalid-fields-email");
-    var span = document.getElementsByClassName("close");
+    var modalAlert = document.getElementById("invalid-fields-email");
+    var span = document.getElementById("close");
      function test(){
          var prueba = localStorage.getItem("Birth");
          var year = prueba.substring(0, prueba.indexOf("/"));
@@ -297,28 +297,28 @@ window.onload = function ()  {
         ||inputPhone.classList.contains("border-red")||inputPostal.classList.contains("border-red")
         ||inputPassword.classList.contains("border-red")||inputSecondPassword.classList.contains("border-red")
         ||inputEmail.classList.contains("border-red")){
-            invalidFieldsEmail.style.display = "block";
+            modalAlert.style.display = "block";
             document.getElementById("span-alert").innerHTML=("One or more fields are")
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
             }
             window.onclick = function(event) {
-                if (event.target == invalidFieldsEmail) {
-                    invalidFieldsEmail.style.display = "none";
+                if (event.target == modalAlert) {
+                    modalAlert.style.display = "none";
                 }
             }
         }else if(inputName.value ==="" || inputLastName.value ==="" || inputDNI.value ==="" 
         || inputBirth.value ==="" || inputAddress.value ==="" || inputCountry.value ==="" 
         || inputPhone.value ==="" || inputPostal.value ==="" || inputPassword.value ==="" 
         || inputEmail.value ==="" || inputSecondPassword.value ===""){
-            invalidFieldsEmail.style.display = "block";
+            modalAlert.style.display = "block";
             document.getElementById("span-alert").innerHTML=("Empty fields")
             span.onclick = function() {
-                invalidFieldsEmail.style.display = "none";
+                modalAlert.style.display = "none";
             }
             window.onclick = function(event) {
-                if (event.target == invalidFieldsEmail) {
-                    invalidFieldsEmail.style.display = "none";
+                if (event.target == modalAlert) {
+                    modalAlert.style.display = "none";
                 }
             }
         }
@@ -332,14 +332,14 @@ window.onload = function ()  {
                 return response.json();
             })
             .then(function(data){
-                invalidFieldsEmail.style.display = "block";
+                modalAlert.style.display = "block";
                     document.getElementById("span-alert").innerHTML=(data.msg)
                     span.onclick = function() {
-                        invalidFieldsEmail.style.display = "none";
+                        modalAlert.style.display = "none";
                     }
                     window.onclick = function(event) {
-                        if (event.target == invalidFieldsEmail) {
-                            invalidFieldsEmail.style.display = "none";
+                        if (event.target == modalAlert) {
+                            modalAlert.style.display = "none";
                         }
                     }
                 localStorage.setItem("Name", inputName.value);
@@ -354,7 +354,16 @@ window.onload = function ()  {
                 localStorage.setItem("Password", inputPassword.value)
             })
             .catch(function(error){
-                alert(error)
+                modalAlert.style.display = "block";
+                    document.getElementById("span-alert").innerHTML=(error + "\n" + "Check parameters")
+                    span.onclick = function() {
+                        modalAlert.style.display = "none";
+                    }
+                    window.onclick = function(event) {
+                        if (event.target == modalAlert) {
+                            modalAlert.style.display = "none";
+                        }
+                    }
             })
         }
     }
